@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fifty States, Thirty-Five Countries &mdash; mapgap.eu</title>
+<meta name="description" content="Thirty-five countries ranked against the fifty American states on
+thirteen metrics, with the comparisons that cannot be made and why.">
+<meta property="og:title" content="Fifty States, Thirty-Five Countries">
+<meta property="og:description" content="Thirty-five countries ranked against the fifty American
+states on thirteen metrics.">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="fonts.css">
+<style>
+:root{--bg:#11131A;--fg:#F4F2EC;--mut:#9AA0AC;--dim:#8B909C;--acc:#D4344B;
+--line:#1E2230;--panel:#191C25;--rule:#2B3040;--band:rgba(212,52,75,.10)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);
+ font-family:'IBM Plex Sans',system-ui,-apple-system,sans-serif;
+ font-size:17px;line-height:1.62;-webkit-text-size-adjust:100%}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header.top{border-bottom:1px solid var(--rule);padding:56px 0 40px;margin-bottom:44px}
+.eyebrow{font-size:13px;letter-spacing:2.4px;text-transform:uppercase;color:var(--mut);font-weight:500}
+h1{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(40px,8vw,68px);
+ line-height:1.02;font-weight:400;letter-spacing:-.5px;margin:14px 0 16px}
+.stand{font-size:21px;color:var(--mut);line-height:1.5;margin:0 0 18px}
+.byline{font-size:14px;color:var(--dim)}
+h2{font-family:'Instrument Serif',Georgia,serif;font-size:34px;font-weight:400;
+ line-height:1.15;margin:52px 0 18px;letter-spacing:-.2px}
+h3{font-size:15px;letter-spacing:1.8px;text-transform:uppercase;color:var(--acc);
+ font-weight:600;margin:40px 0 14px}
+p{margin:0 0 18px}
+a{color:var(--acc)}
+a:hover{color:#E85E72}
+strong{font-weight:600;color:#FFFDF7}
+em{font-style:italic}
+.lead{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:26px;
+ line-height:1.35;color:var(--fg);background:var(--panel);border-left:3px solid var(--acc);
+ padding:22px 26px;margin:34px 0}
+figure{margin:38px 0}
+figcaption{font-size:13px;color:var(--dim);line-height:1.5;margin-top:12px}
+.chart{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:20px 0;position:relative}
+.chart .ttl{font-size:15px;font-weight:600;margin-bottom:4px}
+.chart .note{font-size:13px;color:var(--dim);line-height:1.45;margin-bottom:16px}
+.plot{position:relative}
+.bandbox{position:absolute;top:0;bottom:0;background:var(--band);
+ border-left:1px solid rgba(212,52,75,.35);border-right:1px solid rgba(212,52,75,.35)}
+.bandlab{position:absolute;top:-2px;font-size:11px;color:var(--acc);letter-spacing:.6px;
+ text-transform:uppercase;transform:translateX(4px)}
+.row{display:flex;align-items:center;gap:8px;position:relative;padding:1.5px 0}
+.row .nm{width:112px;flex:none;font-size:12.5px;color:#D7D4CC;text-align:right;
+ white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.track{flex:1;position:relative;height:13px}
+.bar{position:absolute;left:0;top:2px;height:9px;background:#6E7686;border-radius:1px}
+.row.hi .bar{background:var(--acc)}
+.row.us .bar{background:#F4F2EC}
+.dot{position:absolute;top:3px;width:7px;height:7px;border-radius:50%;
+ background:#6E7686;transform:translateX(-3.5px)}
+.row.hi .dot{background:var(--acc)}
+.row.us .dot{background:#F4F2EC}
+.track.trunc::before{content:"";position:absolute;left:0;right:0;top:6px;
+ height:1px;background:var(--line)}
+.row .vl{width:62px;flex:none;font-size:12px;color:var(--mut);
+ font-variant-numeric:tabular-nums;text-align:right}
+table{width:100%;border-collapse:collapse;margin:26px 0;font-size:15px}
+th{text-align:left;font-size:12px;letter-spacing:1.2px;text-transform:uppercase;
+ color:var(--acc);font-weight:600;padding:0 8px 9px 0;border-bottom:1px solid var(--rule)}
+td{padding:9px 8px 9px 0;border-bottom:1px solid var(--line);vertical-align:top}
+td.n{font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+.cards{max-width:1180px;margin:0 auto;padding:0 20px;
+ display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:22px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:3px;padding:22px 22px 18px}
+.card h4{margin:0 0 3px;font-family:'Instrument Serif',Georgia,serif;font-size:27px;font-weight:400}
+.card .no{font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:var(--mut)}
+.card .cl{font-size:13.5px;color:var(--mut);line-height:1.45;margin:8px 0 14px;
+ padding-bottom:12px;border-bottom:1px solid var(--rule)}
+.crow{display:flex;align-items:baseline;gap:8px;padding:6px 0;border-bottom:1px solid var(--line)}
+.crow:last-of-type{border-bottom:none}
+.crow .l{flex:1;font-size:13px;color:#D7D4CC}
+.crow .v{font-size:13px;font-weight:500;font-variant-numeric:tabular-nums}
+.crow .r{width:40px;text-align:right;font-size:13px;font-weight:600;
+ font-variant-numeric:tabular-nums;color:var(--mut)}
+.crow .r.one{color:var(--acc)}
+.fisc{margin-top:12px;padding-top:11px;border-top:1px solid var(--rule);
+ font-size:12px;color:var(--dim);line-height:1.5}
+.dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:26px 0}
+.dl a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:3px;
+ padding:16px 18px;text-decoration:none;color:var(--fg)}
+.dl a:hover{border-color:var(--acc)}
+.dl .k{font-size:15px;font-weight:600;margin-bottom:3px}
+.dl .d{font-size:12.5px;color:var(--dim);line-height:1.45}
+.gap{background:#2A1116;border:1px solid var(--acc);border-radius:3px;padding:20px 22px;margin:30px 0}
+.gap .k{font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:var(--acc);
+ font-weight:600;margin-bottom:8px}
+footer{border-top:1px solid var(--rule);margin-top:64px;padding:40px 0 60px;
+ font-size:13.5px;color:var(--dim);line-height:1.6}
+footer a{color:var(--mut)}
+
+@media print{
+ @page{size:A4;margin:18mm 16mm}
+ :root{--bg:#fff;--fg:#14151A;--mut:#4A505C;--dim:#5A6069;--acc:#A8253A;
+  --line:#DDDCD6;--panel:#F6F5F1;--rule:#BFBDB4;--band:rgba(168,37,58,.09)}
+ body{font-size:10.5pt;line-height:1.5}
+ .wrap{max-width:none;padding:0}
+ header.top{padding:0 0 18pt;margin-bottom:22pt;break-after:avoid}
+ h1{font-size:34pt;margin:8pt 0 10pt}
+ .stand{font-size:13pt}
+ h2{font-size:17pt;margin:22pt 0 8pt;break-after:avoid}
+ h3{margin:16pt 0 6pt;break-after:avoid}
+ p{orphans:3;widows:3}
+ strong{color:#000}
+ .row .nm,.crow .l{color:#14151A}
+ .card .cl{color:#3A4049}
+ em{color:inherit}
+ .lead{font-size:14pt;padding:12pt 14pt;break-inside:avoid}
+ figure{break-inside:avoid;margin:16pt 0}
+ .chart{padding:10pt 0}
+ .bar{background:#6A6F7A}
+ .row.hi .bar,.row.hi .dot{background:var(--acc)}
+ .row.us .bar,.row.us .dot{background:#14151A}
+ .dot{background:#6A6F7A}
+ .row .nm{width:92pt;font-size:8pt}
+ .row .vl{width:44pt;font-size:8pt}
+ .cards{max-width:none;padding:0;display:block}
+ .card{break-inside:avoid;break-after:page;border:none;background:#fff;
+  padding:0;margin:0;display:flex;flex-direction:column;min-height:245mm}
+ .card .no{font-size:9pt;letter-spacing:2.4pt;color:var(--mut)}
+ .card h4{font-size:40pt;margin:4pt 0 0;line-height:1.05}
+ .card .cl{font-size:13pt;color:#3A4049;line-height:1.4;margin:10pt 0 16pt;
+  padding-bottom:14pt;border-bottom:1pt solid var(--rule)}
+ .crow{padding:7.5pt 0;border-bottom:0.5pt solid var(--line)}
+ .crow .l{font-size:11.5pt;color:#14151A}
+ .crow .v{font-size:11.5pt;font-weight:600}
+ .crow .r{width:38pt;font-size:11.5pt}
+ .fisc{margin-top:auto;padding-top:12pt;border-top:1pt solid var(--rule);font-size:9.5pt}
+ .card:last-of-type{break-after:auto}
+ .dl{display:none}
+ #downloads,#downloads+p{display:none}
+ a{color:var(--fg);text-decoration:none}
+ footer{margin-top:22pt;padding:14pt 0 0}
+}
+@media(max-width:640px){
+ body{font-size:16px}
+ .row .nm{width:88px;font-size:11.5px}
+ .row .vl{width:54px;font-size:11px}
+ h2{font-size:28px}
+ .lead{font-size:21px;padding:18px 20px}
+}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<div class="eyebrow">mapgap.eu</div>
+<h1>Fifty States,<br>Thirty-Five Countries</h1>
+<p class="stand">A measurement exercise: what happens when the comparison people make rhetorically
+is made literally, and which halves of it survive.</p>
+<p class="byline">18 September 2026 &middot; 35 countries &middot; 13 metrics &middot; all
+sources listed</p>
+</div></header>
+
+<div class="wrap">
+<h2 id="premise">The device, taken literally</h2>
+<p>A chart circulated widely this year. It set Germany's social statistics against the fifty
+American states and gave each one a rank: life expectancy, first; homicide, first; gun deaths,
+first; nine first places in all, and then, at the bottom, GDP per capita, fiftieth. The joke was in
+the shape of it. A country Americans are often invited to regard as a cautionary tale about taxes
+and sclerosis turns out, on the measures people say they care about, to be the best state in the
+union.</p>
+<p>It is a good device because it defeats a reflex. National comparisons invite the answer that
+America is large and various, that Mississippi and Massachusetts are different countries in all but
+name, and that an average across them means nothing. Ranking against the distribution concedes the
+point and proceeds anyway. If a country beats Massachusetts, the variety argument has nowhere left
+to stand.</p>
+<p>What follows takes the device literally rather than rhetorically. Thirty-five countries were
+placed against the fifty states on thirteen metrics, using, wherever both sides existed, sources
+that measure the same thing on both sides of the comparison. Rank one means better than all fifty
+states. Rank fifty-one means worse than every one of them. The District of Columbia is reported
+where it is informative and never counted among the fifty: it is a city, and a city of a particular
+kind.</p>
+<p>The thirty-five are a selection, not a population, and it is worth saying so rather than
+inventing a rule they satisfy. They comprise the larger European economies, the Nordic and Baltic
+states, and the non-European rich democracies &mdash; Japan, South Korea, Canada, Australia, Israel.
+To these were added seven countries that sit outside that circle and were chosen to show where the
+pattern ends: Russia, Serbia, Bosnia and Herzegovina, Mexico, Brazil, South Africa and India.
+Several OECD members are absent, among them Iceland, Luxembourg, Slovakia, Slovenia, New Zealand,
+Chile and T&uuml;rkiye, as are Bulgaria and Romania. Whether their inclusion would change anything
+was not tested, so nothing here is claimed about it. The selection is richer and more Western than
+the world is, and a reader should carry that into everything below.</p>
+<p>Two things came out of it. On one family of metrics the result is not close, and not close in a
+way that survives the usual objections about definitions, reference years and measurement practice.
+On another family it reverses. And a third group of comparisons &mdash; including several that look
+obvious &mdash; cannot be made at all. The third group turned out to be the more interesting half of
+the work.</p>
+
+<h2 id="notclose">Where the answer is not close</h2>
+<p>On the metrics a legislature sets, the result admits almost no exception. On the metrics that
+accumulate over decades, it admits a specific and coherent set.</p>
+<p><strong>Firearm deaths among children: twenty-nine of twenty-nine.</strong> Counting ages one to
+nineteen, every country with a figure ranks ahead of every American state. The margins are the
+widest in the dataset. Pooling five years so that the smaller states have a stable rate, the lowest
+American state records 1.0 deaths per 100,000, the median 5.6, Louisiana 14.7. Canada records 0.73,
+Sweden 0.44, Germany 0.05, the United Kingdom 0.03. Japan, Hungary, Ireland and the three Baltic
+states record none at all. Germany's margin over the safest American state is a factor of twenty;
+Poland's is thirty-three; set against Louisiana the German figure is smaller by a factor of 294.</p>
+<p>That row carries a limitation which has to be stated. It was compiled for the thirty rich
+democracies, before Mexico, Brazil, South Africa, India and Serbia were added, and those five have
+no figure in it. Three of them would very probably not rank first. The absence of exceptions holds
+for the set the row covers, not for the world.</p>
+<p><strong>Firearm deaths, all ages: twenty-nine of thirty-two.</strong> The safest state, Hawaii,
+records 3.9 per 100,000; the median state 14.8; Mississippi 27.6. The United Kingdom records 0.15,
+Poland 0.27, the Netherlands 0.36. Switzerland, with one of Europe's highest rates of civilian gun
+ownership, records 2.53 and still comes first. The figure includes suicides, which are the majority
+on both sides &mdash; roughly two thirds of the American total.</p>
+<p><strong>Imprisonment: thirty-one of thirty-four.</strong> Counting prisons and jails together,
+including people held before trial, the median American state holds 610 people per 100,000.
+Massachusetts, the lowest, holds 241; Louisiana 1,067. Finland holds 53, the Netherlands and Sweden
+63, Germany 77. Only three countries fall inside the American range &mdash; South Africa at 286,
+Brazil at 354, Russia at 416 &mdash; and all three still rank ahead of most states.</p>
+
+<figure><div class="chart"><div class="ttl">Life expectancy</div><div class="note">Band = the range of the 50 US states, West Virginia 72.2 to Hawaii 80.0. A country inside it would rank as an ordinary state. Scale starts at 64 years, so these are markers rather than bars: the lengths mean nothing, the positions do.</div><div class="plot"><div class="bandbox" style="left:40.00%;right:5.33%"></div><div class="bandlab" style="left:40.00%">US states</div><div class="row hi"><div class="nm">Japan</div><div class="track"><div class="dot" style="left:98.04%"></div></div><div class="vl">84.1</div></div><div class="row hi"><div class="nm">Switzerland</div><div class="track"><div class="dot" style="left:96.09%"></div></div><div class="vl">83.7</div></div><div class="row hi"><div class="nm">Spain</div><div class="track"><div class="dot" style="left:93.65%"></div></div><div class="vl">83.2</div></div><div class="row hi"><div class="nm">Australia</div><div class="track"><div class="dot" style="left:93.65%"></div></div><div class="vl">83.2</div></div><div class="row hi"><div class="nm">Sweden</div><div class="track"><div class="dot" style="left:93.16%"></div></div><div class="vl">83.1</div></div><div class="row hi"><div class="nm">Italy</div><div class="track"><div class="dot" style="left:91.70%"></div></div><div class="vl">82.8</div></div><div class="row hi"><div class="nm">Israel</div><div class="track"><div class="dot" style="left:91.70%"></div></div><div class="vl">82.8</div></div><div class="row hi"><div class="nm">South Korea</div><div class="track"><div class="dot" style="left:91.21%"></div></div><div class="vl">82.7</div></div><div class="row hi"><div class="nm">Ireland</div><div class="track"><div class="dot" style="left:90.72%"></div></div><div class="vl">82.6</div></div><div class="row hi"><div class="nm">Norway</div><div class="track"><div class="dot" style="left:90.24%"></div></div><div class="vl">82.5</div></div><div class="row hi"><div class="nm">France</div><div class="track"><div class="dot" style="left:89.26%"></div></div><div class="vl">82.3</div></div><div class="row hi"><div class="nm">Portugal</div><div class="track"><div class="dot" style="left:86.82%"></div></div><div class="vl">81.8</div></div><div class="row hi"><div class="nm">Belgium</div><div class="track"><div class="dot" style="left:86.82%"></div></div><div class="vl">81.8</div></div><div class="row hi"><div class="nm">Netherlands</div><div class="track"><div class="dot" style="left:86.33%"></div></div><div class="vl">81.7</div></div><div class="row hi"><div class="nm">Austria</div><div class="track"><div class="dot" style="left:84.87%"></div></div><div class="vl">81.4</div></div><div class="row hi"><div class="nm">Denmark</div><div class="track"><div class="dot" style="left:84.38%"></div></div><div class="vl">81.3</div></div><div class="row hi"><div class="nm">Canada</div><div class="track"><div class="dot" style="left:84.38%"></div></div><div class="vl">81.3</div></div><div class="row hi"><div class="nm">Finland</div><div class="track"><div class="dot" style="left:83.89%"></div></div><div class="vl">81.2</div></div><div class="row hi"><div class="nm">United Kingdom</div><div class="track"><div class="dot" style="left:82.43%"></div></div><div class="vl">80.9</div></div><div class="row hi"><div class="nm">Greece</div><div class="track"><div class="dot" style="left:81.94%"></div></div><div class="vl">80.8</div></div><div class="row hi"><div class="nm">Germany</div><div class="track"><div class="dot" style="left:81.46%"></div></div><div class="vl">80.7</div></div><div class="row"><div class="nm">Czechia</div><div class="track"><div class="dot" style="left:73.16%"></div></div><div class="vl">79.0</div></div><div class="row"><div class="nm">Estonia</div><div class="track"><div class="dot" style="left:68.77%"></div></div><div class="vl">78.1</div></div><div class="row"><div class="nm">Croatia</div><div class="track"><div class="dot" style="left:66.82%"></div></div><div class="vl">77.7</div></div><div class="row"><div class="nm">Poland</div><div class="track"><div class="dot" style="left:64.38%"></div></div><div class="vl">77.2</div></div><div class="row"><div class="nm">Hungary</div><div class="track"><div class="dot" style="left:58.53%"></div></div><div class="vl">76.0</div></div><div class="row"><div class="nm">Lithuania</div><div class="track"><div class="dot" style="left:57.56%"></div></div><div class="vl">75.8</div></div><div class="row"><div class="nm">Mexico</div><div class="track"><div class="dot" style="left:54.63%"></div></div><div class="vl">75.2</div></div><div class="row"><div class="nm">Serbia</div><div class="track"><div class="dot" style="left:54.63%"></div></div><div class="vl">75.2</div></div><div class="row"><div class="nm">Brazil</div><div class="track"><div class="dot" style="left:53.17%"></div></div><div class="vl">74.9</div></div><div class="row"><div class="nm">Latvia</div><div class="track"><div class="dot" style="left:51.21%"></div></div><div class="vl">74.5</div></div><div class="row"><div class="nm">Russia</div><div class="track"><div class="dot" style="left:41.46%"></div></div><div class="vl">72.5</div></div><div class="row"><div class="nm">India</div><div class="track"><div class="dot" style="left:37.56%"></div></div><div class="vl">71.7</div></div><div class="row"><div class="nm">South Africa</div><div class="track"><div class="dot" style="left:7.32%"></div></div><div class="vl">65.5</div></div></div></div><figcaption>OECD and World Bank, 2022 &middot; NCHS state life tables, 2022 &middot; 34 countries</figcaption></figure>
+
+<p><strong>Life expectancy: twenty-one of thirty-four.</strong> Here the exceptions begin. The best
+American state is Hawaii at 80.0 years, the worst West Virginia at 72.2, the median 77.3. Spain
+reaches 83.2, Switzerland 83.7. Fourteen countries fall inside or below the American range, in two
+groups. The post-communist states: Czechia 79.0, Estonia 78.1, Croatia 77.7, Poland 77.2, Hungary
+76.0, Lithuania 75.8, Serbia 75.2, Latvia 74.5, Russia 72.5. And the middle-income additions: Mexico
+75.2, Brazil 74.9, India 71.7, South Africa 65.5 &mdash; the last two below every American state.</p>
+<p><strong>Homicide: twenty-four of thirty-three.</strong> New Hampshire records 1.3 per 100,000,
+the median state 5.4, Mississippi 18.6. Switzerland records 0.38, Germany 0.39. The exceptions are
+the Baltic states &mdash; Latvia 3.24, Lithuania 2.22, Estonia 1.96 &mdash; Russia at 4.98, two
+narrow misses in Canada (1.43) and Israel (1.56), and then a different order of magnitude entirely:
+Brazil at 21.24 and Mexico at 29.15, both worse than every American state, Mississippi included.</p>
+<p>So the line does not run between Europe and America. It runs three ways. On what a legislature
+decides &mdash; who may own a firearm, who goes to prison &mdash; Latvia beats every American state
+as comfortably as Norway does, and Brazil beats most of them on imprisonment while being four times
+more lethal. On what accumulates over decades, the formerly communist east sits inside the American
+distribution and the middle-income countries below it. And on lethal violence, Mexico and Brazil
+occupy a category the American range does not reach.</p>
+<p>What the first group has in common is worth stating plainly, because it is the finding rather
+than a gloss on it. Each is the product of arrangements a government chooses and can change: how
+guns are regulated, how often the state imprisons and for how long, how roads and cars are
+engineered and policed. None of them is a fact about geography, climate or national character.</p>
+
+<figure><div class="chart"><div class="ttl">People in prison</div><div class="note">Prisons and jails together, including people held before trial. Band = Massachusetts 241 to Louisiana 1,067. Only three countries reach into it.</div><div class="plot"><div class="bandbox" style="left:22.14%;right:1.96%"></div><div class="bandlab" style="left:22.14%">US states</div><div class="row hi"><div class="nm">India</div><div class="track"><div class="bar" style="width:3.12%"></div></div><div class="vl">34</div></div><div class="row hi"><div class="nm">Japan</div><div class="track"><div class="bar" style="width:3.68%"></div></div><div class="vl">40</div></div><div class="row hi"><div class="nm">Finland</div><div class="track"><div class="bar" style="width:4.87%"></div></div><div class="vl">53</div></div><div class="row hi"><div class="nm">Sweden</div><div class="track"><div class="bar" style="width:5.79%"></div></div><div class="vl">63</div></div><div class="row hi"><div class="nm">Netherlands</div><div class="track"><div class="bar" style="width:5.79%"></div></div><div class="vl">63</div></div><div class="row hi"><div class="nm">Denmark</div><div class="track"><div class="bar" style="width:5.97%"></div></div><div class="vl">65</div></div><div class="row hi"><div class="nm">Norway</div><div class="track"><div class="bar" style="width:5.97%"></div></div><div class="vl">65</div></div><div class="row hi"><div class="nm">Germany</div><div class="track"><div class="bar" style="width:7.07%"></div></div><div class="vl">77</div></div><div class="row hi"><div class="nm">Croatia</div><div class="track"><div class="bar" style="width:7.17%"></div></div><div class="vl">78</div></div><div class="row hi"><div class="nm">Ireland</div><div class="track"><div class="bar" style="width:7.35%"></div></div><div class="vl">80</div></div><div class="row hi"><div class="nm">Switzerland</div><div class="track"><div class="bar" style="width:7.53%"></div></div><div class="vl">82</div></div><div class="row hi"><div class="nm">Belgium</div><div class="track"><div class="bar" style="width:8.27%"></div></div><div class="vl">90</div></div><div class="row hi"><div class="nm">Greece</div><div class="track"><div class="bar" style="width:8.55%"></div></div><div class="vl">93</div></div><div class="row hi"><div class="nm">Austria</div><div class="track"><div class="bar" style="width:9.00%"></div></div><div class="vl">98</div></div><div class="row hi"><div class="nm">Italy</div><div class="track"><div class="bar" style="width:9.19%"></div></div><div class="vl">100</div></div><div class="row hi"><div class="nm">South Korea</div><div class="track"><div class="bar" style="width:9.92%"></div></div><div class="vl">108</div></div><div class="row hi"><div class="nm">Canada</div><div class="track"><div class="bar" style="width:9.92%"></div></div><div class="vl">108</div></div><div class="row hi"><div class="nm">France</div><div class="track"><div class="bar" style="width:10.47%"></div></div><div class="vl">114</div></div><div class="row hi"><div class="nm">Portugal</div><div class="track"><div class="bar" style="width:11.49%"></div></div><div class="vl">125</div></div><div class="row hi"><div class="nm">Spain</div><div class="track"><div class="bar" style="width:11.76%"></div></div><div class="vl">128</div></div><div class="row hi"><div class="nm">United Kingdom</div><div class="track"><div class="bar" style="width:12.77%"></div></div><div class="vl">139</div></div><div class="row hi"><div class="nm">Mexico</div><div class="track"><div class="bar" style="width:14.33%"></div></div><div class="vl">156</div></div><div class="row hi"><div class="nm">Serbia</div><div class="track"><div class="bar" style="width:14.33%"></div></div><div class="vl">156</div></div><div class="row hi"><div class="nm">Hungary</div><div class="track"><div class="bar" style="width:15.34%"></div></div><div class="vl">167</div></div><div class="row hi"><div class="nm">Australia</div><div class="track"><div class="bar" style="width:15.80%"></div></div><div class="vl">172</div></div><div class="row hi"><div class="nm">Poland</div><div class="track"><div class="bar" style="width:17.46%"></div></div><div class="vl">190</div></div><div class="row hi"><div class="nm">Estonia</div><div class="track"><div class="bar" style="width:17.55%"></div></div><div class="vl">191</div></div><div class="row hi"><div class="nm">Latvia</div><div class="track"><div class="bar" style="width:17.92%"></div></div><div class="vl">195</div></div><div class="row hi"><div class="nm">Czechia</div><div class="track"><div class="bar" style="width:18.65%"></div></div><div class="vl">203</div></div><div class="row hi"><div class="nm">Israel</div><div class="track"><div class="bar" style="width:21.50%"></div></div><div class="vl">234</div></div><div class="row hi"><div class="nm">Lithuania</div><div class="track"><div class="bar" style="width:21.59%"></div></div><div class="vl">235</div></div><div class="row"><div class="nm">South Africa</div><div class="track"><div class="bar" style="width:26.28%"></div></div><div class="vl">286</div></div><div class="row"><div class="nm">Brazil</div><div class="track"><div class="bar" style="width:32.53%"></div></div><div class="vl">354</div></div><div class="row"><div class="nm">Russia</div><div class="track"><div class="bar" style="width:38.22%"></div></div><div class="vl">416</div></div></div></div><figcaption>World Prison Brief, 2018 &middot; Prison Policy Initiative &middot; 34 countries</figcaption></figure>
+<h2 id="reverses">Where it reverses</h2>
+<p>On economic output the ordering inverts, and it inverts almost completely. Of thirty-five
+countries, exactly one ranks ahead of any American state on GDP per capita. That country is Ireland,
+and its figure is an artefact &mdash; which is worth taking slowly, because it is the clearest
+illustration in the whole exercise.</p>
+<p>The poorest American state by output is Mississippi, at $55,877 per head in 2025. Mississippi is
+a byword for American poverty; it is also richer per head than France ($48,930), Italy ($43,270),
+Czechia ($35,678), Portugal ($32,166), Greece ($27,041) and Poland ($28,374). Germany, at $60,439,
+clears Mississippi and nothing else.</p>
+<p>The obvious objection is that a dollar buys more in Jackson than in Manhattan, and it is a fair
+one. The American statistical agencies publish exactly what is needed to answer it: a price level
+for each state against the national average. Dividing each state's output by its own price level
+puts both sides in dollars at American average prices, the unit international purchasing-power
+figures already use.</p>
+<p>The adjustment moves things, but not in the direction most people expect. Mississippi's price
+level is 87.0, so its adjusted output rises to $64,261 &mdash; further above France, not below it.
+The countries it helps are the expensive ones: Germany moves from fiftieth to forty-third, Denmark
+from thirty-fifth to twenty-third, Norway from twelfth to third. Switzerland, where prices are high,
+falls from second to seventh. The Netherlands land twenty-seventh, just below the median state
+&mdash; the one country in the set that is both squarely mid-table in output and first in the safety
+metrics. Italy, Spain, Poland and Czechia do not move at all: they remain below every American state
+on both measures.</p>
+<p>Which leaves Ireland. Its nominal output per head is $130,652, and its price-adjusted figure
+$152,632. On both it ranks first, ahead of New York and North Dakota respectively. The number is not
+wrong in the sense of being miscalculated; it is wrong in the sense of not measuring what its name
+suggests. A large share of it is intellectual property booked in Ireland, aircraft leasing capital,
+and retained profits of companies redomiciled there. Ireland's own statistical office says so, and
+publishes a corrected measure for exactly this reason: modified gross national income. That figure
+is 55.4% of GDP &mdash; the two differ by a factor of 1.80, so roughly 45% of the recorded output
+disappears once the globalisation effects are removed. On the corrected measure Ireland ranks
+twenty-eighth, one place below the Netherlands.</p>
+<p>First or twenty-eighth, from the same economy in the same year, depending on which of two
+official numbers you use. The Dutch and Belgian figures were checked for the same distortion and do
+not show it; Ireland is a particular case, not a general feature of corporate hubs.</p>
+<p>So the device cuts both ways, and the second cut is the one that rarely appears in the version
+that circulates. A country can be first in life expectancy and fifty-first in output at the same
+time, and both numbers are correct.</p>
+
+<figure><div class="chart"><div class="ttl">Output per head, price-adjusted</div><div class="note">Each state divided by its own price level, so both sides are in dollars at US average prices. Ireland appears twice: its GDP, and the corrected measure its own agency publishes.</div><div class="plot"><div class="bandbox" style="left:41.28%;right:26.04%"></div><div class="bandlab" style="left:41.28%">US states</div><div class="row hi"><div class="nm">Ireland (GDP)</div><div class="track"><div class="bar" style="width:98.04%"></div></div><div class="vl">$153k</div></div><div class="row"><div class="nm">Norway</div><div class="track"><div class="bar" style="width:71.65%"></div></div><div class="vl">$112k</div></div><div class="row"><div class="nm">Switzerland</div><div class="track"><div class="bar" style="width:65.58%"></div></div><div class="vl">$102k</div></div><div class="row"><div class="nm">Denmark</div><div class="track"><div class="bar" style="width:55.30%"></div></div><div class="vl">$86k</div></div><div class="row"><div class="nm">Netherlands</div><div class="track"><div class="bar" style="width:54.43%"></div></div><div class="vl">$85k</div></div><div class="row"><div class="nm">Ireland (GNI*)</div><div class="track"><div class="bar" style="width:54.35%"></div></div><div class="vl">$85k</div></div><div class="row"><div class="nm">Belgium</div><div class="track"><div class="bar" style="width:48.95%"></div></div><div class="vl">$76k</div></div><div class="row"><div class="nm">Austria</div><div class="track"><div class="bar" style="width:48.70%"></div></div><div class="vl">$76k</div></div><div class="row"><div class="nm">Sweden</div><div class="track"><div class="bar" style="width:47.58%"></div></div><div class="vl">$74k</div></div><div class="row"><div class="nm">Germany</div><div class="track"><div class="bar" style="width:47.53%"></div></div><div class="vl">$74k</div></div><div class="row"><div class="nm">Australia</div><div class="track"><div class="bar" style="width:46.33%"></div></div><div class="vl">$72k</div></div><div class="row"><div class="nm">Canada</div><div class="track"><div class="bar" style="width:43.04%"></div></div><div class="vl">$67k</div></div><div class="row"><div class="nm">Finland</div><div class="track"><div class="bar" style="width:42.58%"></div></div><div class="vl">$66k</div></div><div class="row"><div class="nm">France</div><div class="track"><div class="bar" style="width:42.57%"></div></div><div class="vl">$66k</div></div><div class="row"><div class="nm">United Kingdom</div><div class="track"><div class="bar" style="width:42.09%"></div></div><div class="vl">$66k</div></div><div class="row"><div class="nm">South Korea</div><div class="track"><div class="bar" style="width:42.01%"></div></div><div class="vl">$65k</div></div><div class="row"><div class="nm">Italy</div><div class="track"><div class="bar" style="width:40.81%"></div></div><div class="vl">$64k</div></div><div class="row"><div class="nm">Czechia</div><div class="track"><div class="bar" style="width:38.70%"></div></div><div class="vl">$60k</div></div><div class="row"><div class="nm">Lithuania</div><div class="track"><div class="bar" style="width:37.14%"></div></div><div class="vl">$58k</div></div><div class="row"><div class="nm">Spain</div><div class="track"><div class="bar" style="width:36.63%"></div></div><div class="vl">$57k</div></div><div class="row"><div class="nm">Japan</div><div class="track"><div class="bar" style="width:36.52%"></div></div><div class="vl">$57k</div></div><div class="row"><div class="nm">Israel</div><div class="track"><div class="bar" style="width:36.31%"></div></div><div class="vl">$57k</div></div><div class="row"><div class="nm">Poland</div><div class="track"><div class="bar" style="width:35.84%"></div></div><div class="vl">$56k</div></div><div class="row"><div class="nm">Croatia</div><div class="track"><div class="bar" style="width:33.14%"></div></div><div class="vl">$52k</div></div><div class="row"><div class="nm">Portugal</div><div class="track"><div class="bar" style="width:32.29%"></div></div><div class="vl">$50k</div></div><div class="row"><div class="nm">Russia</div><div class="track"><div class="bar" style="width:32.28%"></div></div><div class="vl">$50k</div></div><div class="row"><div class="nm">Estonia</div><div class="track"><div class="bar" style="width:31.79%"></div></div><div class="vl">$49k</div></div><div class="row"><div class="nm">Hungary</div><div class="track"><div class="bar" style="width:30.99%"></div></div><div class="vl">$48k</div></div><div class="row"><div class="nm">Greece</div><div class="track"><div class="bar" style="width:28.89%"></div></div><div class="vl">$45k</div></div><div class="row"><div class="nm">Latvia</div><div class="track"><div class="bar" style="width:27.95%"></div></div><div class="vl">$44k</div></div><div class="row"><div class="nm">Serbia</div><div class="track"><div class="bar" style="width:21.02%"></div></div><div class="vl">$33k</div></div><div class="row"><div class="nm">Mexico</div><div class="track"><div class="bar" style="width:16.50%"></div></div><div class="vl">$26k</div></div><div class="row"><div class="nm">Brazil</div><div class="track"><div class="bar" style="width:15.02%"></div></div><div class="vl">$23k</div></div><div class="row"><div class="nm">Bosnia</div><div class="track"><div class="bar" style="width:14.70%"></div></div><div class="vl">$23k</div></div><div class="row"><div class="nm">South Africa</div><div class="track"><div class="bar" style="width:10.49%"></div></div><div class="vl">$16k</div></div><div class="row"><div class="nm">India</div><div class="track"><div class="bar" style="width:7.57%"></div></div><div class="vl">$12k</div></div></div></div><figcaption>IMF WEO 2025 &middot; BEA state output and regional price parities &middot; CSO Ireland &middot; 35 countries</figcaption></figure>
+<h2 id="pandemic">The metric that fits neither family</h2>
+<p>One measure in this set belongs to neither group, and it is worth the detour because of what it
+does to the pattern. The pandemic was neither decided in a legislature nor accumulated over fifty
+years. It arrived, and within two years it had done its sorting. The measure is not confirmed deaths
+from covid &mdash; that figure depends on how much a country tested and how it coded, so a state
+that tested less records fewer deaths without anyone having survived. The measure is excess
+mortality: deaths above the number that would otherwise have been expected, whatever they were later
+called.</p>
+
+<figure><div class="chart"><div class="ttl">Excess deaths, 2020–2022</div><div class="note">Band = Hawaii 130 to Mississippi 655. Four countries sit below all of them, four above. Not age-standardised.</div><div class="plot"><div class="bandbox" style="left:13.43%;right:32.33%"></div><div class="bandlab" style="left:13.43%">US states</div><div class="row hi"><div class="nm">Australia</div><div class="track"><div class="bar" style="width:9.49%"></div></div><div class="vl">92</div></div><div class="row hi"><div class="nm">Denmark</div><div class="track"><div class="bar" style="width:11.35%"></div></div><div class="vl">110</div></div><div class="row hi"><div class="nm">Japan</div><div class="track"><div class="bar" style="width:12.80%"></div></div><div class="vl">124</div></div><div class="row hi"><div class="nm">South Korea</div><div class="track"><div class="bar" style="width:12.87%"></div></div><div class="vl">125</div></div><div class="row"><div class="nm">Norway</div><div class="track"><div class="bar" style="width:14.39%"></div></div><div class="vl">139</div></div><div class="row"><div class="nm">Israel</div><div class="track"><div class="bar" style="width:14.78%"></div></div><div class="vl">143</div></div><div class="row"><div class="nm">Canada</div><div class="track"><div class="bar" style="width:16.93%"></div></div><div class="vl">164</div></div><div class="row"><div class="nm">Ireland</div><div class="track"><div class="bar" style="width:17.08%"></div></div><div class="vl">165</div></div><div class="row"><div class="nm">Sweden</div><div class="track"><div class="bar" style="width:17.85%"></div></div><div class="vl">173</div></div><div class="row"><div class="nm">France</div><div class="track"><div class="bar" style="width:22.80%"></div></div><div class="vl">221</div></div><div class="row"><div class="nm">Finland</div><div class="track"><div class="bar" style="width:24.84%"></div></div><div class="vl">240</div></div><div class="row"><div class="nm">Switzerland</div><div class="track"><div class="bar" style="width:25.05%"></div></div><div class="vl">242</div></div><div class="row"><div class="nm">Germany</div><div class="track"><div class="bar" style="width:28.16%"></div></div><div class="vl">273</div></div><div class="row"><div class="nm">Netherlands</div><div class="track"><div class="bar" style="width:28.30%"></div></div><div class="vl">274</div></div><div class="row"><div class="nm">Belgium</div><div class="track"><div class="bar" style="width:28.48%"></div></div><div class="vl">276</div></div><div class="row"><div class="nm">Austria</div><div class="track"><div class="bar" style="width:30.22%"></div></div><div class="vl">292</div></div><div class="row"><div class="nm">United Kingdom</div><div class="track"><div class="bar" style="width:31.13%"></div></div><div class="vl">301</div></div><div class="row"><div class="nm">Spain</div><div class="track"><div class="bar" style="width:33.96%"></div></div><div class="vl">329</div></div><div class="row"><div class="nm">Portugal</div><div class="track"><div class="bar" style="width:37.10%"></div></div><div class="vl">359</div></div><div class="row"><div class="nm">India</div><div class="track"><div class="bar" style="width:38.44%"></div></div><div class="vl">372</div></div><div class="row"><div class="nm">Brazil</div><div class="track"><div class="bar" style="width:39.19%"></div></div><div class="vl">379</div></div><div class="row"><div class="nm">Greece</div><div class="track"><div class="bar" style="width:39.35%"></div></div><div class="vl">381</div></div><div class="row us"><div class="nm">United States</div><div class="track"><div class="bar" style="width:40.36%"></div></div><div class="vl">391</div></div><div class="row"><div class="nm">Estonia</div><div class="track"><div class="bar" style="width:40.92%"></div></div><div class="vl">396</div></div><div class="row"><div class="nm">South Africa</div><div class="track"><div class="bar" style="width:47.12%"></div></div><div class="vl">456</div></div><div class="row"><div class="nm">Italy</div><div class="track"><div class="bar" style="width:48.03%"></div></div><div class="vl">465</div></div><div class="row"><div class="nm">Czechia</div><div class="track"><div class="bar" style="width:49.78%"></div></div><div class="vl">482</div></div><div class="row"><div class="nm">Poland</div><div class="track"><div class="bar" style="width:51.19%"></div></div><div class="vl">496</div></div><div class="row"><div class="nm">Hungary</div><div class="track"><div class="bar" style="width:52.70%"></div></div><div class="vl">510</div></div><div class="row"><div class="nm">Mexico</div><div class="track"><div class="bar" style="width:56.14%"></div></div><div class="vl">543</div></div><div class="row"><div class="nm">Latvia</div><div class="track"><div class="bar" style="width:61.74%"></div></div><div class="vl">598</div></div><div class="row"><div class="nm">Croatia</div><div class="track"><div class="bar" style="width:67.45%"></div></div><div class="vl">653</div></div><div class="row"><div class="nm">Bosnia</div><div class="track"><div class="bar" style="width:82.39%"></div></div><div class="vl">797</div></div><div class="row"><div class="nm">Lithuania</div><div class="track"><div class="bar" style="width:95.02%"></div></div><div class="vl">920</div></div><div class="row"><div class="nm">Serbia</div><div class="track"><div class="bar" style="width:95.07%"></div></div><div class="vl">920</div></div><div class="row"><div class="nm">Russia</div><div class="track"><div class="bar" style="width:98.04%"></div></div><div class="vl">949</div></div></div></div><figcaption>The Economist excess mortality model via Our World in Data &middot; CDC excess deaths &middot; 36 countries</figcaption></figure>
+
+<p>On every metric so far the countries clustered on one side of the American distribution or the
+other. On this one they are spread right across it.</p>
+<p>Four came through better than every American state: Australia at 91.9 excess deaths per 100,000,
+Denmark 109.9, Japan 123.9, South Korea 124.6, against Hawaii's 130.0. Four came through worse than
+every state: Russia 948.9, Serbia 920.2, Lithuania 919.7, Bosnia 797.4, against Mississippi's 655.0.
+Everything else is in between &mdash; including the United States itself at 390.6, against a state
+median of 363.7. Worse than most of Western Europe, better than all of Eastern Europe, and better
+than Italy.</p>
+<p>The groupings that organised everything above do not appear here at all. Mexico finished worse
+than Poland. India finished better than the United States. Lithuania lost 5.3 times as many people
+above baseline as Denmark, and both are small northern European democracies in the EU with universal
+health systems. Even the Nordic bloc, which behaves as one unit everywhere else in this comparison,
+splits across half the range: Denmark 109.9, Norway 139.3, Sweden 172.8, Finland 240.4.</p>
+<p>Two cautions belong with the figure. Nothing here is age-standardised, so comparing Japan with
+Utah is partly a comparison of who was there to die. And the baseline &mdash; the estimate of deaths
+that would have happened anyway &mdash; moves the small numbers a long way: between the two standard
+approaches the gap runs to 63% for Denmark, and it is largest exactly where the excess is smallest.
+Between Australia and Ireland lie seven countries inside the range the baseline choice alone can
+move, and no order among them should be asserted. What survives is the shape: this metric sorted the
+world along a line that none of the others follow.</p>
+
+<h2 id="income">The income question</h2>
+<p>Output per head is not income, and the gap between the two is wider in the United States than
+anywhere else in this set. American GDP contains more capital income, more hours worked per person,
+and a medical system that costs twice as much and counts as economic activity while doing so. So the
+natural next question is what a worker is actually paid &mdash; and this is where the exercise
+becomes genuinely difficult.</p>
+<p>Start with average wages, converted at purchasing-power rates and with each state's output
+divided by its own price level, as before. On that measure the United States leads at $81,116,
+Switzerland is close behind at $80,069, and everyone else is some distance back: Denmark $68,167,
+Germany $66,770, France $56,523, Poland $47,837. Ranked against the states, Germany lands
+forty-seventh and France fifty-first. Mississippi again sets the floor, and again it is higher than
+most people expect: an average wage of $53,223 at a price level of 87.0 is $61,209 in purchasing
+power &mdash; above France, above Sweden, above Finland.</p>
+<p>Then take the median instead, and the picture changes sign.</p>
+<p>American wages are distributed far more unequally than any other country's here. The ratio of the
+ninth decile to the first &mdash; what the top tenth earns against the bottom tenth &mdash; is 4.79
+in the United States. Poland follows at 3.52, the United Kingdom at 2.95, Germany 2.89, Sweden last
+at 2.21. The distance between the United States and Poland is larger than the distance between
+Poland and Sweden. And the dispersion is not only at the top: the ratio of the median to the first
+decile is 1.93 in the United States against 1.69 in Poland, so the bottom tenth sits further below
+the middle as well.</p>
+<p>Applied to the wage figures, that dispersion does most of the work. Against Germany, an American
+advantage of 14.3% at the mean becomes a deficit of 9.0% at the median: the typical German worker
+earns more than the typical American one. Against the United Kingdom, 29.9% falls to 10.0%; against
+France, 42.9% to 25.0%; against Poland, 82.3% to 61.3%. The advantage does not vanish, but it
+shrinks by roughly a third to two thirds, and against the largest European economy it reverses.</p>
+<p>That calculation deserves its caveat in the open. The median levels are derived &mdash; average
+wage multiplied by a published median-to-mean ratio &mdash; and the ratio exists only for countries
+with a statutory minimum wage, which excludes Italy, Switzerland and the Nordics. It is a magnitude,
+not a precision figure. No single source publishes comparable median wage levels for every country
+in this set, which is why the comparison appears here as prose and not as a rank.</p>
+<p>A correct number that measures something other than its name promises is a general hazard,
+not a quirk of wage statistics. A weekly survey of 250,000 people overstated vaccine uptake by
+seventeen points, because size does not correct for selection;
+<a href="https://insights.rhinegold.de/episode7.html">Mass Is Not a Method</a> works through why
+a large biased sample can be worth less than a small random one.</p>
+
+<h2 id="traps">What the traps cost</h2>
+<p>Every metric in this exercise exists in several versions, and the versions do not agree. The
+differences are usually larger than the differences between countries, which means the choice of
+version decides the result. Five cases, each of which would have produced a wrong answer if taken
+from the nearest available source.</p>
+<p><strong>Obesity is measured two ways, and no constant converts between them.</strong> The American
+state figures come from a telephone survey in which people report their own height and weight;
+respondents shade both. International figures are often measured by clinicians. The error cannot be
+adjusted away: the gap between the two readings is 7.6 points for the United States, 6.6 for Germany,
+12.8 for Portugal and 0.3 for Latvia. The instruments have to match rather than be reconciled. That
+they do can be checked: the OECD's self-reported figure for the United States, 34.2%, is exactly the
+median of the fifty state values from the telephone survey. On the measured series Germany reads
+24.5%; on the self-reported series, 17.9%. Only the second belongs in this comparison.</p>
+<p><strong>Homicide counts run in opposite directions on either side of the Atlantic.</strong> In
+Germany the police figure (0.75) is nearly double the death-certificate figure (0.39); in the United
+States the police figure (4.93) is <em>below</em> the death-certificate figure (5.80). Mixing the two
+sources therefore distorts twice, once in each direction. Since the American state data are death
+certificates, the country figures must be too.</p>
+<p><strong>Imprisonment doubles depending on which institutions you count.</strong> Counting only
+state prisons, the American median is 299 per 100,000. Counting prisons and jails together,
+including people held before trial, it is 610. International prison statistics include pre-trial
+detention as a matter of course, so the second figure is the comparable one.</p>
+<p><strong>Advertised wage replacement is not paid wage replacement.</strong> Thirteen American
+states now pay parental leave, and their headline replacement rates look generous. Washington D.C.
+advertises 90%. Because a weekly cap overrides the sliding scale at average earnings, the rate
+actually received by an average earner in D.C. is 43.7% &mdash; the worst in the country, behind the
+state with the lowest advertised rate. In seven of the thirteen programmes the cap, not the published
+percentage, determines the outcome.</p>
+<p><strong>Weeks of leave without the replacement rate inverts the ranking.</strong> The United
+Kingdom grants 39 weeks of maternity leave against Germany's 14, and pays 29.9% against Germany's
+100%. Measured in full-rate equivalent weeks, the United Kingdom provides 11.7 and Germany 14.0.
+Plotting weeks alone would have shown the opposite of the truth.</p>
+<p>None of these is exotic. Each is the version a competent person would reach for first.</p>
+<p>The pattern is not confined to official statistics. In marketing measurement the same
+spending has been shown to return +4,100% when estimated by regression and &minus;63% when
+measured by a randomised field experiment &mdash; two methods, one budget, opposite signs. That
+case is worked through in
+<a href="https://insights.rhinegold.de/episode6.html">The Second Experiment</a>, on rhinegold
+Insights.</p>
+
+<h2 id="cannot">What cannot be compared</h2>
+<p>Eight metrics were prepared, checked and then left out. They are worth listing, because the
+reasons are not technicalities and because a chart that included them would look more complete while
+being worth less.</p>
+<p><strong>Median household income and the poverty rate</strong> cross their own definitions. The
+international figures are net, equivalised for household size, and measure poverty relative to each
+country's own median. The American state figures are gross household income and an absolute poverty
+threshold. Poland's 9.1% poverty rate does not describe less hardship than the American 18.1%; it
+describes a flatter distribution.</p>
+<p><strong>The Human Development Index</strong> has no state-level counterpart at all.</p>
+<p><strong>Maternal mortality</strong> is published by thirty-nine states. The other eleven record
+too few deaths for the statistical agency to release a rate. A first place against an incomplete
+field is not a first place.</p>
+<p><strong>Statutory paid vacation</strong> is genuinely zero in all fifty states, which was
+verified rather than assumed: federal law requires no paid time off, and no state mandates any.
+Three states &mdash; Illinois, Maine and Nevada &mdash; require forty hours of paid leave usable for
+any purpose, which is five days by another name. But a rank in which every state scores zero carries
+no information.</p>
+<p><strong>Life satisfaction</strong>, which would have been the most valuable row of all, because
+it checks the whole exercise against what people say about their own lives. State-level figures on
+the same eleven-point ladder do exist, in one academic source pooling 2008&ndash;17. They cannot be
+joined to the country figures, and the arithmetic is unusually clean about why. The same survey house
+asked the same question of the same country over the same years through two different vehicles and
+got 7.08 and 6.90 &mdash; an instrument gap of 0.18 ladder points. The entire spread across all
+fifty-one American jurisdictions is 0.52. The median gap between neighbouring states is 0.005, and
+every one of the fifty neighbouring gaps is smaller than the instrument gap; thirty-six of the
+fifty-one states fit inside a single 0.18 window. Between countries the measure survives &mdash;
+their spread, 3.06 points, is seventeen times the gap.</p>
+<p><strong>Wages, in every form.</strong> The average misleads, as shown. The median has no source
+covering all countries. And wage dispersion, the measure that would explain both, fails for a reason
+that no amount of care can repair.</p>
+<p>That reason is the most important thing this exercise produced. Measured from the American
+occupational survey, the ratio of top to bottom decile for the United States as a whole is 4.12.
+Measured from the OECD's earnings database, the same country in the same period reads 4.79. The
+method alone accounts for 16% &mdash; more than the distance between most of the countries in the
+ranking. But even with that offset corrected, the comparison would remain invalid, because a state
+is not a nation. Germany's dispersion contains the distance between Munich and Mecklenburg.
+Vermont's contains Vermont. For life expectancy or homicide this does not matter; each is a rate
+that a smaller unit can hold as meaningfully as a larger one. For a measure of spread, the size of
+the unit <em>is</em> the measurement.</p>
+<p>The device, in other words, has a domain. It works for quantities that are per-head and
+policy-made. It breaks on quantities that describe how a population is distributed &mdash; and it
+breaks silently, producing numbers that look like the others.</p>
+
+<h2 id="notreporting">Four ways of not reporting</h2>
+<p>Four countries in the set cannot be read straight, and each fails differently. Sorting out how
+took more of the work than any other part of this exercise, and it is the part most likely to be
+useful to someone running a different comparison.</p>
+<p><strong>Russia</strong> ranks nowhere. Life expectancy 72.5 years, fiftieth of fifty-one. GDP per
+head fifty-first on both measures. Minimum wage fifty-first, at $1.86 an hour. Nothing first. Inside
+that there is a stranger figure: Russian infant mortality ranks fifth and maternal mortality third,
+while its overall life expectancy is the worst in the set. The explanation is in the sex difference
+&mdash; Russian men live 67.6 years, Russian women 77.8, a gap of ten years that no Western European
+country approaches. Russia is not a country where people die young. It is a country where adult men
+do. Four metrics have no Russian value at all, and its cause-of-death reporting stops at 2019, so
+for the war years there is nothing to read.</p>
+<p><strong>Bosnia and Herzegovina</strong> is the harder case, because Bosnia does report. For 2019
+it recorded 38,829 deaths. Of those, the number coded as road traffic deaths is zero. The number
+coded as homicide is one. Deaths of undetermined intent: 918 of the 927 externally caused deaths in
+the file. Deaths of unknown cause: 4,966. A country of three million people did not have one
+homicide and no road deaths in 2019. What the file records is not a peaceful country but a
+cause-of-death coding system that leaves the category unfilled. Read without checking, Bosnia would
+publish as the safest country on earth by a wide margin &mdash; and the numbers would look exactly
+like the numbers from Norway.</p>
+<p><strong>South Africa</strong> is the third case, and the most subtle. The category is filled in
+&mdash; 6,435 road deaths are coded for 2019, so this is not Bosnia. But of 7,596 deaths coded as
+homicide, 6,800 sit under &ldquo;sharp object&rdquo; and eleven under the firearm codes. Meanwhile
+8,340 of 8,369 firearm deaths sit under &ldquo;discharge from an unspecified firearm&rdquo;, which is
+the <em>accident</em> code. The weapon is recorded; the intent is not. The result is a
+death-certificate homicide rate of 12.85 against a police rate of 35.79.</p>
+<p><strong>India</strong> fails earliest of the four. Ninety-four per cent of deaths are registered,
+so registration is not the problem; but only 22% of registered deaths carry a medical certification
+of cause, ranging from 100% in Goa to 5.5% in Bihar. In the international mortality file India
+appears not at all &mdash; zero rows, every year.</p>
+<p>India also supplies the clearest warning against reading a rank without reading what sits behind
+it. Its imprisonment rate is 36 per 100,000, the lowest in the set, well below Finland's 53. That
+looks like restraint. But 72.6% of Indian prisoners are held without trial, the highest share here by
+twenty-two points, and the prisons stand at 112.7% of capacity. India imprisons about ten convicted
+people per 100,000, a quarter of Finland's rate, while holding 26 per 100,000 who have been convicted
+of nothing &mdash; more than Finland and Norway hold in total. Japan makes the contrast: a similar
+rate of 33, but 15.8% pre-trial and prisons at 47.3% of capacity. The same number, two unrelated
+situations.</p>
+<p>Russia withholds; the absence is visible and a careful reader will notice it. Bosnia supplies
+figures that pass every format check and mean nothing. Of the two failure modes, the second is the
+one that gets published.</p>
+<p>What these files record is the coding system, not the country &mdash; an instrument can only
+report the layer it was built to observe. The same problem in a different field is set out in
+<a href="https://insights.rhinegold.de/blog_ep02_wrong_layer.html">Measuring the Wrong
+Layer</a>.</p>
+
+<h2 id="conclusion">What the exercise measures</h2>
+<p>The thirteen metrics fall into two families, and nothing in the data connects them. Excess
+mortality, the fourteenth, belongs to neither.</p>
+<p>One family is decided in legislatures: who may own a firearm, how many people are imprisoned and
+for how long, how many weeks of leave are paid and at what rate, what a road is engineered to
+survive. On these, the countries in this set beat the American states almost without exception, and
+the margins are large enough that no dispute about reference years or definitions touches them.
+Firearm deaths among children admit no exception at all across the twenty-nine countries measured.
+Imprisonment admits three, and all three still rank ahead of most American states.</p>
+<p>The other family is produced by markets and compounds over decades: output per head, wages, and
+&mdash; more slowly and more indirectly &mdash; how long people live. On these the ordering
+reverses. Thirty-four of thirty-five countries produce less per head than the poorest American
+state, and the thirty-fifth is a bookkeeping artefact. Of the fourteen that fail to beat every state
+on life expectancy, nine spent the twentieth century on the other side of the Iron Curtain and four
+are middle-income countries outside Europe.</p>
+<p>The argument between the two systems is normally conducted by each side selecting its family.
+Read one way, the American states are unmatched in what they produce. Read the other, they are
+outliers among rich societies in how many of their people are shot, imprisoned or killed on the
+road. Both readings survive contact with the data. Neither is a rebuttal of the other, because they
+are not claims about the same quantity.</p>
+<p>What the exercise does establish is narrower and harder to argue with. The variety defence
+&mdash; that America is too large and too various to be compared with a single country &mdash; does
+not work on the first family. It is not that the American average is dragged down by its poorest
+states. Massachusetts, the least punitive state in the union, imprisons at four times the Dutch
+rate. Hawaii, the safest, records firearm deaths at ten times the Dutch rate. There is no state to
+point to.</p>
+<p>And on the second family, the honest version is less flattering to Europe than the chart that
+started this. A German worker's median wage is higher than an American one's; a German state's
+output per head is not, and neither is a French, Italian, Spanish, Polish or Czech one.</p>
+<p>The obvious move at this point is to explain the exceptions away by endowment: Norway has oil,
+Switzerland has banks. That move does not survive contact with the map. Norway, the United Kingdom,
+the Netherlands and Denmark all drew hydrocarbons from the same North Sea. Norway banked the proceeds
+in a sovereign fund and ranks third in price-adjusted output; Denmark ranks twenty-third; the
+Netherlands, which had a syndrome named after its gas in the 1970s, ranks twenty-seventh; the United
+Kingdom, which spent the money, ranks fiftieth. Dutch production ended on 1 October 2024, when
+Groningen was closed by law after drilling-induced earthquakes. British output continues, 77% below
+its 1999 peak. One basin, four countries, four different places in the ranking. And on firearms,
+prisons and roads all four rank first, alongside countries with no hydrocarbons whatever. Whatever
+the North Sea explains, it does not explain that.</p>
+<p>The device is worth using for what it can carry: rates, per head, produced by decisions. It
+should not be asked to carry distributions, and it should never be asked to carry a country whose
+statistical system does not fill in the category being measured. Most of the work in this exercise
+went into finding out which was which.</p>
+
+<h2 id="sources">Sources and method</h2>
+<p>Every metric was taken from one source covering every country in that row, and from one source
+covering every state, with the two chosen to measure the same thing. Where that was impossible the
+metric was dropped rather than patched. Reference years differ between metrics and are stated per
+row; within a row they are held constant.</p>
+
+<h3>Country side</h3>
+<table>
+<tr><th>Metric</th><th>Source</th><th>Dataset</th><th class="n">Year</th></tr>
+<tr><td>Life expectancy</td><td><a href="https://data-explorer.oecd.org/">OECD Health
+Statistics</a></td><td>DSD_HEALTH_STAT@DF_LE</td><td class="n">2022</td></tr>
+<tr><td>Infant mortality</td><td><a href="https://data-explorer.oecd.org/">OECD Health
+Statistics</a></td><td>DSD_HEALTH_STAT@DF_MIM</td><td class="n">2023</td></tr>
+<tr><td>Adult obesity, self-reported</td><td><a href="https://data-explorer.oecd.org/">OECD Health
+Statistics</a></td><td>DF_HEALTH_LVNG_BW, self-reported</td><td class="n">2022&ndash;25</td></tr>
+<tr><td>Homicide, death certificates</td><td><a
+href="https://www.who.int/data/data-collection-tools/who-mortality-database">WHO Mortality
+Database</a></td><td>Morticd10, X85&ndash;Y09, Y87.1, U01&ndash;U02</td><td class="n">2019</td></tr>
+<tr><td>Homicide, police records</td><td><a href="https://dataunodc.un.org/">UNODC</a></td>
+<td>Intentional homicide</td><td class="n">2019</td></tr>
+<tr><td>Firearm deaths, all ages and 1&ndash;19</td><td><a
+href="https://www.who.int/data/data-collection-tools/who-mortality-database">WHO Mortality
+Database</a></td><td>Morticd10, W32&ndash;W34, X72&ndash;X74, X93&ndash;X95, Y22&ndash;Y24, Y35.0,
+U01.4</td><td class="n">2019</td></tr>
+<tr><td>Imprisonment, pre-trial share, occupancy</td><td><a
+href="https://www.prisonstudies.org/">World Prison Brief</a></td><td>ICPR Birkbeck, incl.
+pre-trial</td><td class="n">2018</td></tr>
+<tr><td>Road deaths</td><td><a href="https://www.itf-oecd.org/">ITF/OECD</a></td>
+<td>DF_SAFETY, per 100,000 inhabitants</td><td class="n">2019</td></tr>
+<tr><td>GDP per capita, nominal and PPP</td><td><a
+href="https://www.imf.org/en/Publications/WEO">IMF World Economic Outlook</a></td>
+<td>NGDPDPC, PPPPC, WEO April 2026</td><td class="n">2025</td></tr>
+<tr><td>Modified gross national income, Ireland</td><td><a href="https://www.cso.ie/">CSO
+Ireland</a></td><td>GNI* national accounts</td><td class="n">2025</td></tr>
+<tr><td>Minimum wage</td><td><a href="https://www.wsi.de/de/faust-detail.htm?sync_id=HBS-009362">WSI Minimum Wage Report 2026</a></td><td>WSI Report 111</td><td class="n">1 Jan 2026</td></tr>
+<tr><td>Parental leave, full-rate equivalent</td><td><a
+href="https://www.oecd.org/en/data/datasets/oecd-family-database.html">OECD Family
+Database</a></td><td>PF2.1.A</td><td class="n">2025</td></tr>
+<tr><td>Average annual wages</td><td><a href="https://data-explorer.oecd.org/">OECD</a></td>
+<td>AV_AN_WAGE, USD at PPP</td><td class="n">2025</td></tr>
+<tr><td>Earnings decile ratios</td><td><a href="https://data-explorer.oecd.org/">OECD</a></td>
+<td>DEC_I, gross earnings, full-time</td><td class="n">2024</td></tr>
+<tr><td>Excess mortality</td><td><a href="https://ourworldindata.org/excess-mortality-covid">The
+Economist model via Our World in Data</a></td><td>Cumulative per 100,000</td>
+<td class="n">2020&ndash;22</td></tr>
+<tr><td>Government debt and balance</td><td><a
+href="https://www.imf.org/en/Publications/WEO">IMF World Economic Outlook</a></td>
+<td>GGXWDG_NGDP, GGXCNL_NGDP</td><td class="n">2025</td></tr>
+</table>
+
+<h3>State side</h3>
+<table>
+<tr><th>Metric</th><th>Source</th><th>Dataset</th><th class="n">Year</th></tr>
+<tr><td>Life expectancy</td><td><a
+href="https://www.cdc.gov/nchs/data/nvsr/nvsr74/nvsr74-12.pdf">NCHS/NVSS</a></td>
+<td>NVSR 74/12, state life tables</td><td class="n">2022</td></tr>
+<tr><td>Infant mortality</td><td><a href="https://www.cdc.gov/nchs/products/nvsr.htm">NCHS/NVSS</a>
+</td><td>NVSR 74/7, linked birth&ndash;death file</td><td class="n">2023</td></tr>
+<tr><td>Adult obesity</td><td><a href="https://data.cdc.gov/d/hn4x-zwk7">CDC BRFSS</a></td>
+<td>hn4x-zwk7, Q036, self-reported</td><td class="n">2024</td></tr>
+<tr><td>Homicide and firearm deaths</td><td><a href="https://data.cdc.gov/d/fpsi-y8tj">CDC
+NCIPC/NCHS</a></td><td>fpsi-y8tj, crude rates</td><td class="n">2024</td></tr>
+<tr><td>Firearm deaths, ages 1&ndash;19</td><td><a href="https://wonder.cdc.gov/">CDC WONDER</a>
+</td><td>D158, underlying cause of death</td><td class="n">2020&ndash;24</td></tr>
+<tr><td>Imprisonment, prison and jail</td><td><a href="https://www.prisonpolicy.org/">Prison Policy
+Initiative</a></td><td>States of Incarceration 2024</td><td class="n">mixed</td></tr>
+<tr><td>Road deaths</td><td><a
+href="https://www.iihs.org/topics/fatality-statistics/detail/state-by-state">IIHS</a></td>
+<td>Fatality Facts, from NHTSA FARS</td><td class="n">2024</td></tr>
+<tr><td>GDP per capita, state price levels</td><td><a href="https://apps.bea.gov/regional/">BEA</a>
+</td><td>SAGDP1, SAINC1, SARPP</td><td class="n">2024&ndash;25</td></tr>
+<tr><td>Uninsured share</td><td><a href="https://www.census.gov/programs-surveys/acs/">US
+Census</a></td><td>ACS 1-Year, table B27010</td><td class="n">2024</td></tr>
+<tr><td>Minimum wage, paid vacation</td><td><a
+href="https://www.dol.gov/agencies/whd/minimum-wage/state">US Department of Labor</a></td>
+<td>State minimum wage laws; FLSA</td><td class="n">2026</td></tr>
+<tr><td>Paid family leave</td><td><a href="https://www.abetterbalance.org/family-leave-laws/">A
+Better Balance</a></td><td>State PFML laws, with agency sources</td><td class="n">2026</td></tr>
+<tr><td>Average, median and percentile wages</td><td><a href="https://www.bls.gov/oes/tables.htm">
+BLS</a></td><td>QCEW; OEWS, All Occupations</td><td class="n">2025</td></tr>
+<tr><td>Excess mortality</td><td><a href="https://data.cdc.gov/">CDC</a></td>
+<td>Excess Deaths Associated with COVID-19</td><td class="n">2020&ndash;22</td></tr>
+</table>
+
+<h3>Stated limits</h3>
+<p>Reference years are not uniform across metrics: violent deaths and road deaths are 2019 on the
+country side against 2024 on the state side, and imprisonment is 2018 against a mixed 2022&ndash;24
+vintage. Where a country's margin is a factor of two or more this is immaterial; where it is a few
+per cent it is noted in the text.</p>
+<p>Obesity appears only for countries whose survey year is within two years of the American one,
+which excludes France, Poland and Russia rather than excluding the metric. The row for firearm
+deaths among children covers thirty countries and not Mexico, Brazil, South Africa, India or
+Serbia. That the two sides of that row measure the same thing was verified rather than assumed, by
+reproducing the American 2019 count from both sources independently &mdash; 3,378 deaths from each,
+on the same denominator.</p>
+<p>Purchasing-power figures chain two adjustments: an international parity from the country to
+United States average prices, and a regional price parity from those prices to the individual
+state. Both carry their own error, and the second was built for comparisons inside the United
+States rather than across borders.</p>
+<p>The median wage comparison is derived from published average wages and published
+median-to-mean ratios, not from a single published series of median levels, which does not exist
+for this set of countries. South Africa's homicide rate appears in the text at its police value and
+is absent from the ranked column. India has no entry in the international mortality file at all.
+Neither gap was filled from elsewhere.</p>
+<p>No figure on this page is age-standardised. The claim that firearms are the leading cause of
+death among American children traces to <a
+href="https://www.nejm.org/doi/full/10.1056/NEJMc2201761">Goldstick, Cunningham and Carter, NEJM
+2022</a>, and was re-checked against the underlying data rather than cited from the paper.</p>
+
+
+<h2 id="downloads">Take the data</h2>
+<p>Everything here is reproducible. The figures below are the ones the charts and cards are drawn
+from, not a summary of them.</p>
+<div class="dl">
+<a href="data/mapgap-all-data.zip"><div class="k">Full dataset (ZIP)</div><div class="d">Every
+country and state figure, one CSV per source, with year, source URL and evidence class on each
+row.</div></a>
+<a href="data/country-cards.csv"><div class="k">Country cards (CSV)</div><div class="d">The
+35 cards below as one flat table: country, metric, value, rank.</div></a>
+<a href="fifty-states.pdf"><div class="k">Article (PDF)</div><div class="d">This page, including the
+charts and the source apparatus.</div></a>
+</div>
+</div>
+
+<div class="wrap"><h2 id="cards">All 35 countries</h2>
+<p>One card per country, in series order. A dash means the country does not report that figure
+&mdash; it is not a zero. Countries with fewer ranked rows report less, not better.</p></div>
+<div class="cards"><article class="card" id="c-poland"><div class="no">No. 1</div><h4>Poland</h4><div class="cl">Less violent than every state. Poorer than every state.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">77.2 yrs</div><div class="r">27th</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">3.9</div><div class="r">6th</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">0.66</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">0.27</div><div class="r one">1st</div></div><div class="crow"><div class="l">People in prison</div><div class="v">190</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths, ages 1-19</div><div class="v">0.03</div><div class="r one">1st</div></div><div class="crow"><div class="l">Road deaths</div><div class="v">7.7</div><div class="r">6th</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$28,374</div><div class="r">51st</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$55,793</div><div class="r">51st</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">$8.27/h</div><div class="r">31st</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">20.0 wks</div><div class="r one">1st</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">40.3 wks</div><div class="r one">1st</div></div><div class="fisc">Government debt 58.8% of GDP &middot; budget balance &minus;7.0% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-france"><div class="no">No. 2</div><h4>France</h4><div class="cl">Longer lives than every state. Lower output than 49 of them.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">82.3 yrs</div><div class="r one">1st</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">4.0</div><div class="r">6th</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">0.64</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">2.27</div><div class="r one">1st</div></div><div class="crow"><div class="l">People in prison</div><div class="v">114</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths, ages 1-19</div><div class="v">0.16</div><div class="r one">1st</div></div><div class="crow"><div class="l">Road deaths</div><div class="v">4.8</div><div class="r">2nd</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$48,930</div><div class="r">51st</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$66,276</div><div class="r">50th</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">$13.80/h</div><div class="r">21st</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">16.0 wks</div><div class="r one">1st</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">19.6 wks</div><div class="r one">1st</div></div><div class="fisc">Government debt 116% of GDP &middot; budget balance &minus;5.1% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-denmark"><div class="no">No. 3</div><h4>Denmark</h4><div class="cl">First in ten of twelve. Mid&#8209;table on money.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">81.3 yrs</div><div class="r one">1st</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">2.4</div><div class="r one">1st</div></div><div class="crow"><div class="l">Adult obesity</div><div class="v">18.7%</div><div class="r one">1st</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">0.62</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">1.01</div><div class="r one">1st</div></div><div class="crow"><div class="l">People in prison</div><div class="v">65</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths, ages 1-19</div><div class="v">0.16</div><div class="r one">1st</div></div><div class="crow"><div class="l">Road deaths</div><div class="v">3.4</div><div class="r one">1st</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$77,046</div><div class="r">35th</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$86,094</div><div class="r">23rd</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">none</div><div class="r">&mdash;</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">10.9 wks</div><div class="r one">1st</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">20.4 wks</div><div class="r one">1st</div></div><div class="fisc">Government debt 27.5% of GDP &middot; budget balance +2.9% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-germany"><div class="no">No. 4</div><h4>Germany</h4><div class="cl">Safer and longer&#8209;lived than every state.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">80.7 yrs</div><div class="r one">1st</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">3.2</div><div class="r">3rd</div></div><div class="crow"><div class="l">Adult obesity</div><div class="v">17.9%</div><div class="r one">1st</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">0.39</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">0.96</div><div class="r one">1st</div></div><div class="crow"><div class="l">People in prison</div><div class="v">77</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths, ages 1-19</div><div class="v">0.05</div><div class="r one">1st</div></div><div class="crow"><div class="l">Road deaths</div><div class="v">3.7</div><div class="r one">1st</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$60,439</div><div class="r">50th</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$74,004</div><div class="r">43rd</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">$15.96/h</div><div class="r">7th</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">14.0 wks</div><div class="r one">1st</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">38.2 wks</div><div class="r one">1st</div></div><div class="fisc">Government debt 62.9% of GDP &middot; budget balance &minus;2.7% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-united-kingdom"><div class="no">No. 5</div><h4>United Kingdom</h4><div class="cl">Fewest gun deaths of all fifty, by a factor of twenty&#8209;six.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">80.9 yrs</div><div class="r one">1st</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">4.2</div><div class="r">8th</div></div><div class="crow"><div class="l">Adult obesity</div><div class="v">30.0%</div><div class="r">9th</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">0.46</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">0.15</div><div class="r one">1st</div></div><div class="crow"><div class="l">People in prison</div><div class="v">139</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths, ages 1-19</div><div class="v">0.03</div><div class="r one">1st</div></div><div class="crow"><div class="l">Road deaths</div><div class="v">2.7</div><div class="r one">1st</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$57,608</div><div class="r">50th</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$65,525</div><div class="r">50th</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">$16.33/h</div><div class="r">4th</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">11.7 wks</div><div class="r one">1st</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">11.7 wks</div><div class="r one">1st</div></div><div class="fisc">Government debt 102.3% of GDP &middot; budget balance &minus;5.4% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-italy"><div class="no">No. 6</div><h4>Italy</h4><div class="cl">9 of 12 ranked metrics at #1. 51st for output.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">82.8 yrs</div><div class="r one">1st</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">2.5</div><div class="r one">1st</div></div><div class="crow"><div class="l">Adult obesity</div><div class="v">11.8%</div><div class="r one">1st</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">0.43</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">0.93</div><div class="r one">1st</div></div><div class="crow"><div class="l">People in prison</div><div class="v">100</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths, ages 1-19</div><div class="v">0.11</div><div class="r one">1st</div></div><div class="crow"><div class="l">Road deaths</div><div class="v">5.3</div><div class="r">3rd</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$43,270</div><div class="r">51st</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$63,538</div><div class="r">51st</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">none</div><div class="r">&mdash;</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">17.4 wks</div><div class="r one">1st</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">31.7 wks</div><div class="r one">1st</div></div><div class="fisc">Government debt 137.1% of GDP &middot; budget balance &minus;3.1% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-spain"><div class="no">No. 7</div><h4>Spain</h4><div class="cl">10 of 13 ranked metrics at #1. 51st for output.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">83.2 yrs</div><div class="r one">1st</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">2.6</div><div class="r one">1st</div></div><div class="crow"><div class="l">Adult obesity</div><div class="v">14.7%</div><div class="r one">1st</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">0.62</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">0.49</div><div class="r one">1st</div></div><div class="crow"><div class="l">People in prison</div><div class="v">128</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths, ages 1-19</div><div class="v">0.04</div><div class="r one">1st</div></div><div class="crow"><div class="l">Road deaths</div><div class="v">3.7</div><div class="r one">1st</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$38,290</div><div class="r">51st</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$57,034</div><div class="r">51st</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">$9.91/h</div><div class="r">30th</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">16.0 wks</div><div class="r one">1st</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">16.0 wks</div><div class="r one">1st</div></div><div class="fisc">Government debt 100.4% of GDP &middot; budget balance &minus;2.5% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-switzerland"><div class="no">No. 8</div><h4>Switzerland</h4><div class="cl">7 of 12 ranked metrics at #1. 7th for output.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">83.7 yrs</div><div class="r one">1st</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">3.3</div><div class="r">4th</div></div><div class="crow"><div class="l">Adult obesity</div><div class="v">12.1%</div><div class="r one">1st</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">0.38</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">2.53</div><div class="r one">1st</div></div><div class="crow"><div class="l">People in prison</div><div class="v">82</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths, ages 1-19</div><div class="v">0.18</div><div class="r one">1st</div></div><div class="crow"><div class="l">Road deaths</div><div class="v">2.2</div><div class="r one">1st</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$115,620</div><div class="r">2nd</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$102,096</div><div class="r">7th</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">none</div><div class="r">&mdash;</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">8.1 wks</div><div class="r">5th</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">8.1 wks</div><div class="r">5th</div></div><div class="fisc">Government debt 39.4% of GDP &middot; budget balance +0.5% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-norway"><div class="no">No. 9</div><h4>Norway</h4><div class="cl">10 of 12 ranked metrics at #1. 3rd for output.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">82.5 yrs</div><div class="r one">1st</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">2.1</div><div class="r one">1st</div></div><div class="crow"><div class="l">Adult obesity</div><div class="v">16.0%</div><div class="r one">1st</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">0.50</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">1.50</div><div class="r one">1st</div></div><div class="crow"><div class="l">People in prison</div><div class="v">65</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths, ages 1-19</div><div class="v">0.17</div><div class="r one">1st</div></div><div class="crow"><div class="l">Road deaths</div><div class="v">2.0</div><div class="r one">1st</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$94,468</div><div class="r">12th</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$111,545</div><div class="r">3rd</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">none</div><div class="r">&mdash;</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">17.5 wks</div><div class="r one">1st</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">39.3 wks</div><div class="r one">1st</div></div><div class="fisc">Government debt 45% of GDP &middot; budget balance +9.3% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-sweden"><div class="no">No. 10</div><h4>Sweden</h4><div class="cl">10 of 12 ranked metrics at #1. 43rd for output.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">83.1 yrs</div><div class="r one">1st</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">2.1</div><div class="r one">1st</div></div><div class="crow"><div class="l">Adult obesity</div><div class="v">17.3%</div><div class="r one">1st</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">1.05</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">1.42</div><div class="r one">1st</div></div><div class="crow"><div class="l">People in prison</div><div class="v">63</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths, ages 1-19</div><div class="v">0.44</div><div class="r one">1st</div></div><div class="crow"><div class="l">Road deaths</div><div class="v">2.1</div><div class="r one">1st</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$62,662</div><div class="r">49th</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$74,081</div><div class="r">43rd</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">none</div><div class="r">&mdash;</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">10.0 wks</div><div class="r one">1st</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">34.4 wks</div><div class="r one">1st</div></div><div class="fisc">Government debt 34.9% of GDP &middot; budget balance &minus;1.4% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-finland"><div class="no">No. 11</div><h4>Finland</h4><div class="cl">8 of 12 ranked metrics at #1. 50th for output.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">81.2 yrs</div><div class="r one">1st</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">1.8</div><div class="r one">1st</div></div><div class="crow"><div class="l">Adult obesity</div><div class="v">26.0%</div><div class="r">2nd</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">1.12</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">2.39</div><div class="r one">1st</div></div><div class="crow"><div class="l">People in prison</div><div class="v">53</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths, ages 1-19</div><div class="v">0.18</div><div class="r one">1st</div></div><div class="crow"><div class="l">Road deaths</div><div class="v">3.8</div><div class="r one">1st</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$56,464</div><div class="r">50th</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$66,297</div><div class="r">50th</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">none</div><div class="r">&mdash;</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">5.7 wks</div><div class="r">11th</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">39.7 wks</div><div class="r one">1st</div></div><div class="fisc">Government debt 89.3% of GDP &middot; budget balance &minus;3.9% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-russia"><div class="no">No. 12</div><h4>Russia</h4><div class="cl">No first places in 7 ranked metrics. 51st for output.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">72.5 yrs</div><div class="r">50th</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">3.7</div><div class="r">5th</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">4.98</div><div class="r">22nd</div></div><div class="crow"><div class="l">People in prison</div><div class="v">416</div><div class="r">13th</div></div><div class="crow"><div class="l">Gun deaths, ages 1-19</div><div class="v"></div><div class="r">n/a</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$17,972</div><div class="r">51st</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$50,255</div><div class="r">51st</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">$1.86/h</div><div class="r">51st</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">not reported</div><div class="r">&mdash;</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">not reported</div><div class="r">&mdash;</div></div><div class="fisc">Government debt 17.2% of GDP &middot; budget balance &minus;3.9% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-japan"><div class="no">No. 13</div><h4>Japan</h4><div class="cl">8 of 12 ranked metrics at #1. 51st for output.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">84.1 yrs</div><div class="r one">1st</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">1.8</div><div class="r one">1st</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">0.24</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">0.01</div><div class="r one">1st</div></div><div class="crow"><div class="l">People in prison</div><div class="v">40</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths, ages 1-19</div><div class="v">0.00</div><div class="r one">1st</div></div><div class="crow"><div class="l">Road deaths</div><div class="v">3.1</div><div class="r one">1st</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$35,973</div><div class="r">51st</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$56,854</div><div class="r">51st</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">$7.20/h</div><div class="r">51st</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">9.4 wks</div><div class="r">2nd</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">36.3 wks</div><div class="r one">1st</div></div><div class="fisc">Government debt 206.5% of GDP &middot; budget balance &minus;1.1% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-south-korea"><div class="no">No. 14</div><h4>South Korea</h4><div class="cl">9 of 13 ranked metrics at #1. 50th for output.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">82.7 yrs</div><div class="r one">1st</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">2.5</div><div class="r one">1st</div></div><div class="crow"><div class="l">Adult obesity</div><div class="v">5.3%</div><div class="r one">1st</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">0.79</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">0.02</div><div class="r one">1st</div></div><div class="crow"><div class="l">People in prison</div><div class="v">108</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths, ages 1-19</div><div class="v">0.01</div><div class="r one">1st</div></div><div class="crow"><div class="l">Road deaths</div><div class="v">6.5</div><div class="r">4th</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$36,227</div><div class="r">51st</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$65,405</div><div class="r">50th</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">$7.46/h</div><div class="r">31st</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">10.5 wks</div><div class="r one">1st</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">47.6 wks</div><div class="r one">1st</div></div><div class="fisc">Government debt 52.3% of GDP &middot; budget balance &minus;1.4% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-canada"><div class="no">No. 15</div><h4>Canada</h4><div class="cl">7 of 13 ranked metrics at #1. 50th for output.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">81.3 yrs</div><div class="r one">1st</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">4.6</div><div class="r">12th</div></div><div class="crow"><div class="l">Adult obesity</div><div class="v">24.0%</div><div class="r one">1st</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">1.43</div><div class="r">2nd</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">2.33</div><div class="r one">1st</div></div><div class="crow"><div class="l">People in prison</div><div class="v">108</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths, ages 1-19</div><div class="v">0.73</div><div class="r one">1st</div></div><div class="crow"><div class="l">Road deaths</div><div class="v">4.7</div><div class="r one">1st</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$55,765</div><div class="r">51st</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$67,013</div><div class="r">50th</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">$11.98/h</div><div class="r">25th</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">5.8 wks</div><div class="r">11th</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">20.1 wks</div><div class="r one">1st</div></div><div class="fisc">Government debt 113.5% of GDP &middot; budget balance &minus;1.8% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-australia"><div class="no">No. 16</div><h4>Australia</h4><div class="cl">7 of 13 ranked metrics at #1. 48th for output.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">83.2 yrs</div><div class="r one">1st</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">3.2</div><div class="r">3rd</div></div><div class="crow"><div class="l">Adult obesity</div><div class="v">25.4%</div><div class="r">2nd</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">0.99</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">0.96</div><div class="r one">1st</div></div><div class="crow"><div class="l">People in prison</div><div class="v">172</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths, ages 1-19</div><div class="v">0.10</div><div class="r one">1st</div></div><div class="crow"><div class="l">Road deaths</div><div class="v">4.7</div><div class="r one">1st</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$66,352</div><div class="r">47th</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$72,132</div><div class="r">48th</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">$17.74/h</div><div class="r one">1st</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">0.9 wks</div><div class="r">13th</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">9.2 wks</div><div class="r">3rd</div></div><div class="fisc">Government debt 51.0% of GDP &middot; budget balance &minus;2.8% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-portugal"><div class="no">No. 17</div><h4>Portugal</h4><div class="cl">8 of 13 ranked metrics at #1. 51st for output.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">81.8 yrs</div><div class="r one">1st</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">2.5</div><div class="r one">1st</div></div><div class="crow"><div class="l">Adult obesity</div><div class="v">15.9%</div><div class="r one">1st</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">0.87</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">0.97</div><div class="r one">1st</div></div><div class="crow"><div class="l">People in prison</div><div class="v">125</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths, ages 1-19</div><div class="v">0.11</div><div class="r one">1st</div></div><div class="crow"><div class="l">Road deaths</div><div class="v">6.7</div><div class="r">4th</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$32,166</div><div class="r">51st</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$50,269</div><div class="r">51st</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">$7.29/h</div><div class="r">31st</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">6.0 wks</div><div class="r">10th</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">22.3 wks</div><div class="r one">1st</div></div><div class="fisc">Government debt 89.9% of GDP &middot; budget balance +0.3% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-netherlands"><div class="no">No. 18</div><h4>Netherlands</h4><div class="cl">9 of 13 ranked metrics at #1. 27th for output.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">81.7 yrs</div><div class="r one">1st</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">3.6</div><div class="r">4th</div></div><div class="crow"><div class="l">Adult obesity</div><div class="v">15.2%</div><div class="r one">1st</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">0.62</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">0.36</div><div class="r one">1st</div></div><div class="crow"><div class="l">People in prison</div><div class="v">63</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths, ages 1-19</div><div class="v">0.08</div><div class="r one">1st</div></div><div class="crow"><div class="l">Road deaths</div><div class="v">3.8</div><div class="r one">1st</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$73,833</div><div class="r">38th</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$84,738</div><div class="r">27th</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">$16.89/h</div><div class="r">4th</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">16.0 wks</div><div class="r one">1st</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">22.3 wks</div><div class="r one">1st</div></div><div class="fisc">Government debt 43.3% of GDP &middot; budget balance &minus;1.8% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-belgium"><div class="no">No. 19</div><h4>Belgium</h4><div class="cl">8 of 13 ranked metrics at #1. 38th for output.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">81.8 yrs</div><div class="r one">1st</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">3.1</div><div class="r">2nd</div></div><div class="crow"><div class="l">Adult obesity</div><div class="v">17.0%</div><div class="r one">1st</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">0.83</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">1.37</div><div class="r one">1st</div></div><div class="crow"><div class="l">People in prison</div><div class="v">90</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths, ages 1-19</div><div class="v">0.20</div><div class="r one">1st</div></div><div class="crow"><div class="l">Road deaths</div><div class="v">5.6</div><div class="r">4th</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$61,002</div><div class="r">50th</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$76,208</div><div class="r">38th</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">$15.02/h</div><div class="r">12th</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">11.6 wks</div><div class="r one">1st</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">15.1 wks</div><div class="r one">1st</div></div><div class="fisc">Government debt 106.3% of GDP &middot; budget balance &minus;5.3% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-austria"><div class="no">No. 20</div><h4>Austria</h4><div class="cl">9 of 11 ranked metrics at #1. 39th for output.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">81.4 yrs</div><div class="r one">1st</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">2.8</div><div class="r one">1st</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">0.52</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">2.88</div><div class="r one">1st</div></div><div class="crow"><div class="l">People in prison</div><div class="v">98</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths, ages 1-19</div><div class="v">0.24</div><div class="r one">1st</div></div><div class="crow"><div class="l">Road deaths</div><div class="v">4.7</div><div class="r one">1st</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$63,161</div><div class="r">49th</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$75,825</div><div class="r">39th</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">none</div><div class="r">&mdash;</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">16.0 wks</div><div class="r one">1st</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">46.5 wks</div><div class="r one">1st</div></div><div class="fisc">Government debt 80.5% of GDP &middot; budget balance &minus;4.5% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-hungary"><div class="no">No. 21</div><h4>Hungary</h4><div class="cl">7 of 13 ranked metrics at #1. 51st for output.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">76.0 yrs</div><div class="r">35th</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">3.0</div><div class="r">2nd</div></div><div class="crow"><div class="l">Adult obesity</div><div class="v">22.2%</div><div class="r one">1st</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">0.82</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">0.61</div><div class="r one">1st</div></div><div class="crow"><div class="l">People in prison</div><div class="v">167</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths, ages 1-19</div><div class="v">0.00</div><div class="r one">1st</div></div><div class="crow"><div class="l">Road deaths</div><div class="v">6.2</div><div class="r">4th</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$25,826</div><div class="r">51st</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$48,239</div><div class="r">51st</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">$5.36/h</div><div class="r">51st</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">24.0 wks</div><div class="r one">1st</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">75.9 wks</div><div class="r one">1st</div></div><div class="fisc">Government debt 75.2% of GDP &middot; budget balance &minus;4.7% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-ireland"><div class="no">No. 22</div><h4>Ireland</h4><div class="cl">9 of 13 ranked metrics at #1. 1st for output.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">82.6 yrs</div><div class="r one">1st</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">3.0</div><div class="r">2nd</div></div><div class="crow"><div class="l">Adult obesity</div><div class="v">21.3%</div><div class="r one">1st</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">0.26</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">0.34</div><div class="r one">1st</div></div><div class="crow"><div class="l">People in prison</div><div class="v">80</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths, ages 1-19</div><div class="v">0.00</div><div class="r one">1st</div></div><div class="crow"><div class="l">Road deaths</div><div class="v">2.8</div><div class="r one">1st</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$130,652</div><div class="r one">1st</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$152,632</div><div class="r one">1st</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">$16.25/h</div><div class="r">4th</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">6.1 wks</div><div class="r">10th</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">8.2 wks</div><div class="r">4th</div></div><div class="fisc">Government debt 32.9% of GDP &middot; budget balance +1.5% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-czechia"><div class="no">No. 23</div><h4>Czechia</h4><div class="cl">7 of 12 ranked metrics at #1. 51st for output.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">79.0 yrs</div><div class="r">9th</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">2.2</div><div class="r one">1st</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">0.73</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">1.83</div><div class="r one">1st</div></div><div class="crow"><div class="l">People in prison</div><div class="v">203</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths, ages 1-19</div><div class="v">0.10</div><div class="r one">1st</div></div><div class="crow"><div class="l">Road deaths</div><div class="v">5.8</div><div class="r">4th</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$35,678</div><div class="r">51st</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$60,247</div><div class="r">51st</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">$6.25/h</div><div class="r">51st</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">17.5 wks</div><div class="r one">1st</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">50.6 wks</div><div class="r one">1st</div></div><div class="fisc">Government debt 44.6% of GDP &middot; budget balance &minus;2.0% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-latvia"><div class="no">No. 24</div><h4>Latvia</h4><div class="cl">7 of 13 ranked metrics at #1. 51st for output.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">74.5 yrs</div><div class="r">42nd</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">2.6</div><div class="r one">1st</div></div><div class="crow"><div class="l">Adult obesity</div><div class="v">24.0%</div><div class="r one">1st</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">3.24</div><div class="r">13th</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">1.20</div><div class="r one">1st</div></div><div class="crow"><div class="l">People in prison</div><div class="v">195</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths, ages 1-19</div><div class="v">0.00</div><div class="r one">1st</div></div><div class="crow"><div class="l">Road deaths</div><div class="v">7.0</div><div class="r">4th</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$26,116</div><div class="r">51st</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$43,509</div><div class="r">51st</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">$5.30/h</div><div class="r">51st</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">12.8 wks</div><div class="r one">1st</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">43.9 wks</div><div class="r one">1st</div></div><div class="fisc">Government debt 46.9% of GDP &middot; budget balance &minus;4.0% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-lithuania"><div class="no">No. 25</div><h4>Lithuania</h4><div class="cl">7 of 13 ranked metrics at #1. 51st for output.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">75.8 yrs</div><div class="r">37th</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">2.8</div><div class="r one">1st</div></div><div class="crow"><div class="l">Adult obesity</div><div class="v">20.3%</div><div class="r one">1st</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">2.22</div><div class="r">5th</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">1.07</div><div class="r one">1st</div></div><div class="crow"><div class="l">People in prison</div><div class="v">235</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths, ages 1-19</div><div class="v">0.00</div><div class="r one">1st</div></div><div class="crow"><div class="l">Road deaths</div><div class="v">6.6</div><div class="r">4th</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$32,839</div><div class="r">51st</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$57,818</div><div class="r">51st</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">$8.09/h</div><div class="r">31st</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">14.0 wks</div><div class="r one">1st</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">52.5 wks</div><div class="r one">1st</div></div><div class="fisc">Government debt 39.8% of GDP &middot; budget balance &minus;2.2% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-estonia"><div class="no">No. 26</div><h4>Estonia</h4><div class="cl">8 of 13 ranked metrics at #1. 51st for output.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">78.1 yrs</div><div class="r">16th</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">1.7</div><div class="r one">1st</div></div><div class="crow"><div class="l">Adult obesity</div><div class="v">19.9%</div><div class="r one">1st</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">1.96</div><div class="r">4th</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">1.36</div><div class="r one">1st</div></div><div class="crow"><div class="l">People in prison</div><div class="v">191</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths, ages 1-19</div><div class="v">0.00</div><div class="r one">1st</div></div><div class="crow"><div class="l">Road deaths</div><div class="v">3.9</div><div class="r one">1st</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$34,325</div><div class="r">51st</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$49,492</div><div class="r">51st</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">$6.10/h</div><div class="r">51st</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">14.3 wks</div><div class="r one">1st</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">82.1 wks</div><div class="r one">1st</div></div><div class="fisc">Government debt 24.2% of GDP &middot; budget balance &minus;1.3% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-croatia"><div class="no">No. 27</div><h4>Croatia</h4><div class="cl">6 of 12 ranked metrics at #1. 51st for output.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">77.7 yrs</div><div class="r">21st</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">3.9</div><div class="r">6th</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">0.81</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">2.18</div><div class="r one">1st</div></div><div class="crow"><div class="l">People in prison</div><div class="v">78</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths, ages 1-19</div><div class="v">0.14</div><div class="r one">1st</div></div><div class="crow"><div class="l">Road deaths</div><div class="v">7.5</div><div class="r">6th</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$27,376</div><div class="r">51st</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$51,593</div><div class="r">51st</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">$6.97/h</div><div class="r">51st</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">30.0 wks</div><div class="r one">1st</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">56.0 wks</div><div class="r one">1st</div></div><div class="fisc">Government debt 55.9% of GDP &middot; budget balance &minus;2.9% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-greece"><div class="no">No. 28</div><h4>Greece</h4><div class="cl">8 of 13 ranked metrics at #1. 51st for output.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">80.8 yrs</div><div class="r one">1st</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">3.4</div><div class="r">4th</div></div><div class="crow"><div class="l">Adult obesity</div><div class="v">12.2%</div><div class="r one">1st</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">0.87</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">1.41</div><div class="r one">1st</div></div><div class="crow"><div class="l">People in prison</div><div class="v">93</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths, ages 1-19</div><div class="v">0.10</div><div class="r one">1st</div></div><div class="crow"><div class="l">Road deaths</div><div class="v">6.4</div><div class="r">4th</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$27,041</div><div class="r">51st</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$44,981</div><div class="r">51st</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">$6.81/h</div><div class="r">51st</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">33.3 wks</div><div class="r one">1st</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">37.0 wks</div><div class="r one">1st</div></div><div class="fisc">Government debt 145.7% of GDP &middot; budget balance +1.3% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-bosnia"><div class="no">No. 29</div><h4>Bosnia</h4><div class="cl">1 of 4 ranked metrics at #1. 51st for output.</div><div class="crow"><div class="l">Gun deaths, ages 1-19</div><div class="v">0.00</div><div class="r one">1st</div></div><div class="crow"><div class="l">Road deaths</div><div class="v">7.7</div><div class="r">6th</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$9,568</div><div class="r">51st</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$22,887</div><div class="r">51st</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">keine_vergleichbare_quelle/h</div><div class="r">n/a</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">nicht_in_quellreihe_enthalten wks</div><div class="r">n/a</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">nicht_in_quellreihe_enthalten wks</div><div class="r">n/a</div></div><div class="fisc">Government debt 29.9% of GDP &middot; budget balance &minus;2.4% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-israel"><div class="no">No. 30</div><h4>Israel</h4><div class="cl">9 of 13 ranked metrics at #1. 51st for output.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">82.8 yrs</div><div class="r one">1st</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">2.7</div><div class="r one">1st</div></div><div class="crow"><div class="l">Adult obesity</div><div class="v">19.9%</div><div class="r one">1st</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">1.56</div><div class="r">2nd</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">1.34</div><div class="r one">1st</div></div><div class="crow"><div class="l">People in prison</div><div class="v">234</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths, ages 1-19</div><div class="v">0.36</div><div class="r one">1st</div></div><div class="crow"><div class="l">Road deaths</div><div class="v">3.9</div><div class="r one">1st</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$60,335</div><div class="r">50th</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$56,528</div><div class="r">51st</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">$11.07/h</div><div class="r">27th</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">15.0 wks</div><div class="r one">1st</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">15.0 wks</div><div class="r one">1st</div></div><div class="fisc">Government debt 68.5% of GDP &middot; budget balance &minus;5.2% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-south-africa"><div class="no">No. 31</div><h4>South Africa</h4><div class="cl">No first places in 7 ranked metrics. 51st for output.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">65.5 yrs</div><div class="r">51st</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">24.4</div><div class="r">51st</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">12.85</div><div class="r">&mdash;</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">14.15</div><div class="r">25th</div></div><div class="crow"><div class="l">People in prison</div><div class="v">286</div><div class="r">7th</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$6,769</div><div class="r">51st</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$16,326</div><div class="r">51st</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">$1.77/h</div><div class="r">51st</div></div><div class="fisc">Government debt 78.6% of GDP &middot; budget balance &minus;5.8% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-brazil"><div class="no">No. 32</div><h4>Brazil</h4><div class="cl">No first places in 8 ranked metrics. 51st for output.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">74.9 yrs</div><div class="r">42nd</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">12.5</div><div class="r">51st</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">20.97</div><div class="r">51st</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">16.83</div><div class="r">32nd</div></div><div class="crow"><div class="l">People in prison</div><div class="v">354</div><div class="r">10th</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$10,686</div><div class="r">51st</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$23,381</div><div class="r">51st</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">$1.34/h</div><div class="r">51st</div></div><div class="fisc">Government debt 93.3% of GDP &middot; budget balance &minus;8.1% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-mexico"><div class="no">No. 33</div><h4>Mexico</h4><div class="cl">3 of 10 ranked metrics at #1. 51st for output.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">75.2 yrs</div><div class="r">40th</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">13.4</div><div class="r">51st</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">28.23</div><div class="r">51st</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">21.68</div><div class="r">44th</div></div><div class="crow"><div class="l">People in prison</div><div class="v">156</div><div class="r one">1st</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$13,741</div><div class="r">51st</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$25,682</div><div class="r">51st</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">$2.29/h</div><div class="r">51st</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">12.0 wks</div><div class="r one">1st</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">12.0 wks</div><div class="r one">1st</div></div><div class="fisc">Government debt 61.8% of GDP &middot; budget balance &minus;4.9% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-india"><div class="no">No. 34</div><h4>India</h4><div class="cl">2 of 6 ranked metrics at #1. 51st for output.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">71.7 yrs</div><div class="r">51st</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">24.5</div><div class="r">51st</div></div><div class="crow"><div class="l">People in prison</div><div class="v">34</div><div class="r one">1st</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$2,675</div><div class="r">51st</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$11,789</div><div class="r">51st</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">kein_einheitlicher_nationaler_satz/h</div><div class="r">n/a</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">26.0 wks</div><div class="r one">1st</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">nicht_in_quellreihe_enthalten wks</div><div class="r">n/a</div></div><div class="fisc">Government debt 84.1% of GDP &middot; budget balance &minus;7.4% &middot; US 123.9% and &minus;6.8%</div></article><article class="card" id="c-serbia"><div class="no">No. 35</div><h4>Serbia</h4><div class="cl">4 of 10 ranked metrics at #1. 51st for output.</div><div class="crow"><div class="l">Life expectancy</div><div class="v">75.2 yrs</div><div class="r">40th</div></div><div class="crow"><div class="l">Infant mortality</div><div class="v">4.5</div><div class="r">11th</div></div><div class="crow"><div class="l">Homicide rate</div><div class="v">1.24</div><div class="r one">1st</div></div><div class="crow"><div class="l">Gun deaths</div><div class="v">2.38</div><div class="r one">1st</div></div><div class="crow"><div class="l">People in prison</div><div class="v">156</div><div class="r one">1st</div></div><div class="crow"><div class="l">Road deaths</div><div class="v">7.7</div><div class="r">6th</div></div><div class="crow"><div class="l">GDP per capita</div><div class="v">$15,284</div><div class="r">51st</div></div><div class="crow"><div class="l">GDP per capita, price-adjusted</div><div class="v">$32,724</div><div class="r">51st</div></div><div class="crow"><div class="l">Minimum wage</div><div class="v">$4.91/h</div><div class="r">51st</div></div><div class="crow"><div class="l">Maternity leave</div><div class="v">20.0 wks</div><div class="r one">1st</div></div><div class="crow"><div class="l">All paid leave, mothers</div><div class="v">nicht_in_quellreihe_enthalten wks</div><div class="r">n/a</div></div><div class="fisc">Government debt 42.4% of GDP &middot; budget balance &minus;2.2% &middot; US 123.9% and &minus;6.8%</div></article></div>
+
+<div class="wrap">
+<h2 id="legal">Legal notice</h2>
+
+<h3>Responsible for this site</h3>
+<p>Michael Zachrau<br>
+Putstraat 29<br>
+3630 Maasmechelen<br>
+Belgium</p>
+<p>E-mail: <a href="mailto:michaelhzachrau@gmail.com">michaelhzachrau@gmail.com</a></p>
+<p>Responsible publisher (<em>verantwoordelijke uitgever</em> /
+<em>&eacute;diteur responsable</em>): Michael Zachrau, at the address above.</p>
+<p>This is a private, non-commercial publication. It sells nothing, takes no advertising and
+carries no enterprise number. Identification is given under Book XII of the Belgian Code of
+Economic Law.</p>
+
+<h3>What this site collects</h3>
+<p>Nothing. There are no cookies, no analytics, no tracking pixels and no embedded third-party
+content. Fonts are served from this domain rather than from a font provider, so no request leaves
+for another server and no visitor IP address is passed to anyone. The site is static: it has no
+database, no forms and no login, and it receives no personal data to store.</p>
+<p>The hosting provider (GitHub Pages, GitHub Inc., 88 Colin P. Kelly Jr. St., San Francisco, CA
+94107, USA) records server log data including IP addresses for the operation and security of the
+service. That processing is GitHub's, described in the
+<a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement">GitHub
+Privacy Statement</a>, and is not accessible to the operator of this site.</p>
+<p>Under the General Data Protection Regulation you may ask what data is held about you, have it
+corrected or erased, and lodge a complaint with a supervisory authority &mdash; in Belgium, the
+Data Protection Authority (<a href="https://www.gegevensbeschermingsautoriteit.be">Autorit&eacute;
+de protection des donn&eacute;es / Gegevensbeschermingsautoriteit</a>). As this site holds no
+personal data, such a request would return nothing.</p>
+
+<h3>Accuracy and reuse</h3>
+<p>Every figure on this page carries its source and reference year, and the dataset is published in
+full so that any number can be checked against its origin. Where a comparison could not be made
+honestly, it was left out and the reason stated. Mistakes are possible all the same; write to the
+address above and corrections will be made and marked.</p>
+<p>The text and charts on this page may be quoted and reproduced with attribution to
+<em>mapgap.eu</em>. The underlying statistics belong to the institutions that publish them and
+carry their own terms, which are linked in the dataset.</p>
+
+</div>
+
+<footer><div class="wrap">
+<p>Sources, in full, with dataset identifiers and reference years, are listed in the article above
+and in the notes shipped with the dataset. Country figures: OECD, WHO Mortality Database, IMF,
+World Prison Brief, ITF, UNDP, WSI, Eurostat, CSO Ireland, Our World in Data. State figures: CDC,
+CDC WONDER, NCHS, BEA, US Census Bureau, Bureau of Justice Statistics, Prison Policy Initiative,
+IIHS, US Department of Labor, BLS, A Better Balance.</p>
+<p>Latest comparable years, 2017&ndash;2026. Reference years differ between metrics and are stated
+per metric. No figure on this page is age-standardised unless the text says so.</p>
+</div></footer>
+</body>
+</html>

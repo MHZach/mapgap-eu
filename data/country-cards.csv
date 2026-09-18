@@ -1,0 +1,421 @@
+country,series_no,metric,value,rank_among_50_states,ranked_metrics,first_places,govt_debt_pct_gdp,budget_balance_pct_gdp
+Poland,1,Life expectancy,77.2 yrs,27th,12,6,58.8,-7.0
+Poland,1,Infant mortality,3.9,6th,12,6,58.8,-7.0
+Poland,1,Homicide rate,0.66,1st,12,6,58.8,-7.0
+Poland,1,Gun deaths,0.27,1st,12,6,58.8,-7.0
+Poland,1,People in prison,190,1st,12,6,58.8,-7.0
+Poland,1,"Gun deaths, ages 1-19",0.03,1st,12,6,58.8,-7.0
+Poland,1,Road deaths,7.7,6th,12,6,58.8,-7.0
+Poland,1,GDP per capita,"$28,374",51st,12,6,58.8,-7.0
+Poland,1,"GDP per capita, price-adjusted","$55,793",51st,12,6,58.8,-7.0
+Poland,1,Minimum wage,$8.27/h,31st,12,6,58.8,-7.0
+Poland,1,Maternity leave,20.0 wks,1st,12,6,58.8,-7.0
+Poland,1,"All paid leave, mothers",40.3 wks,1st,12,6,58.8,-7.0
+France,2,Life expectancy,82.3 yrs,1st,12,7,116,-5.1
+France,2,Infant mortality,4.0,6th,12,7,116,-5.1
+France,2,Homicide rate,0.64,1st,12,7,116,-5.1
+France,2,Gun deaths,2.27,1st,12,7,116,-5.1
+France,2,People in prison,114,1st,12,7,116,-5.1
+France,2,"Gun deaths, ages 1-19",0.16,1st,12,7,116,-5.1
+France,2,Road deaths,4.8,2nd,12,7,116,-5.1
+France,2,GDP per capita,"$48,930",51st,12,7,116,-5.1
+France,2,"GDP per capita, price-adjusted","$66,276",50th,12,7,116,-5.1
+France,2,Minimum wage,$13.80/h,21st,12,7,116,-5.1
+France,2,Maternity leave,16.0 wks,1st,12,7,116,-5.1
+France,2,"All paid leave, mothers",19.6 wks,1st,12,7,116,-5.1
+Denmark,3,Life expectancy,81.3 yrs,1st,12,10,27.5,+2.9
+Denmark,3,Infant mortality,2.4,1st,12,10,27.5,+2.9
+Denmark,3,Adult obesity,18.7%,1st,12,10,27.5,+2.9
+Denmark,3,Homicide rate,0.62,1st,12,10,27.5,+2.9
+Denmark,3,Gun deaths,1.01,1st,12,10,27.5,+2.9
+Denmark,3,People in prison,65,1st,12,10,27.5,+2.9
+Denmark,3,"Gun deaths, ages 1-19",0.16,1st,12,10,27.5,+2.9
+Denmark,3,Road deaths,3.4,1st,12,10,27.5,+2.9
+Denmark,3,GDP per capita,"$77,046",35th,12,10,27.5,+2.9
+Denmark,3,"GDP per capita, price-adjusted","$86,094",23rd,12,10,27.5,+2.9
+Denmark,3,Minimum wage,none,-,12,10,27.5,+2.9
+Denmark,3,Maternity leave,10.9 wks,1st,12,10,27.5,+2.9
+Denmark,3,"All paid leave, mothers",20.4 wks,1st,12,10,27.5,+2.9
+Germany,4,Life expectancy,80.7 yrs,1st,13,9,62.9,-2.7
+Germany,4,Infant mortality,3.2,3rd,13,9,62.9,-2.7
+Germany,4,Adult obesity,17.9%,1st,13,9,62.9,-2.7
+Germany,4,Homicide rate,0.39,1st,13,9,62.9,-2.7
+Germany,4,Gun deaths,0.96,1st,13,9,62.9,-2.7
+Germany,4,People in prison,77,1st,13,9,62.9,-2.7
+Germany,4,"Gun deaths, ages 1-19",0.05,1st,13,9,62.9,-2.7
+Germany,4,Road deaths,3.7,1st,13,9,62.9,-2.7
+Germany,4,GDP per capita,"$60,439",50th,13,9,62.9,-2.7
+Germany,4,"GDP per capita, price-adjusted","$74,004",43rd,13,9,62.9,-2.7
+Germany,4,Minimum wage,$15.96/h,7th,13,9,62.9,-2.7
+Germany,4,Maternity leave,14.0 wks,1st,13,9,62.9,-2.7
+Germany,4,"All paid leave, mothers",38.2 wks,1st,13,9,62.9,-2.7
+United Kingdom,5,Life expectancy,80.9 yrs,1st,13,8,102.3,-5.4
+United Kingdom,5,Infant mortality,4.2,8th,13,8,102.3,-5.4
+United Kingdom,5,Adult obesity,30.0%,9th,13,8,102.3,-5.4
+United Kingdom,5,Homicide rate,0.46,1st,13,8,102.3,-5.4
+United Kingdom,5,Gun deaths,0.15,1st,13,8,102.3,-5.4
+United Kingdom,5,People in prison,139,1st,13,8,102.3,-5.4
+United Kingdom,5,"Gun deaths, ages 1-19",0.03,1st,13,8,102.3,-5.4
+United Kingdom,5,Road deaths,2.7,1st,13,8,102.3,-5.4
+United Kingdom,5,GDP per capita,"$57,608",50th,13,8,102.3,-5.4
+United Kingdom,5,"GDP per capita, price-adjusted","$65,525",50th,13,8,102.3,-5.4
+United Kingdom,5,Minimum wage,$16.33/h,4th,13,8,102.3,-5.4
+United Kingdom,5,Maternity leave,11.7 wks,1st,13,8,102.3,-5.4
+United Kingdom,5,"All paid leave, mothers",11.7 wks,1st,13,8,102.3,-5.4
+Italy,6,Life expectancy,82.8 yrs,1st,12,9,137.1,-3.1
+Italy,6,Infant mortality,2.5,1st,12,9,137.1,-3.1
+Italy,6,Adult obesity,11.8%,1st,12,9,137.1,-3.1
+Italy,6,Homicide rate,0.43,1st,12,9,137.1,-3.1
+Italy,6,Gun deaths,0.93,1st,12,9,137.1,-3.1
+Italy,6,People in prison,100,1st,12,9,137.1,-3.1
+Italy,6,"Gun deaths, ages 1-19",0.11,1st,12,9,137.1,-3.1
+Italy,6,Road deaths,5.3,3rd,12,9,137.1,-3.1
+Italy,6,GDP per capita,"$43,270",51st,12,9,137.1,-3.1
+Italy,6,"GDP per capita, price-adjusted","$63,538",51st,12,9,137.1,-3.1
+Italy,6,Minimum wage,none,-,12,9,137.1,-3.1
+Italy,6,Maternity leave,17.4 wks,1st,12,9,137.1,-3.1
+Italy,6,"All paid leave, mothers",31.7 wks,1st,12,9,137.1,-3.1
+Spain,7,Life expectancy,83.2 yrs,1st,13,10,100.4,-2.5
+Spain,7,Infant mortality,2.6,1st,13,10,100.4,-2.5
+Spain,7,Adult obesity,14.7%,1st,13,10,100.4,-2.5
+Spain,7,Homicide rate,0.62,1st,13,10,100.4,-2.5
+Spain,7,Gun deaths,0.49,1st,13,10,100.4,-2.5
+Spain,7,People in prison,128,1st,13,10,100.4,-2.5
+Spain,7,"Gun deaths, ages 1-19",0.04,1st,13,10,100.4,-2.5
+Spain,7,Road deaths,3.7,1st,13,10,100.4,-2.5
+Spain,7,GDP per capita,"$38,290",51st,13,10,100.4,-2.5
+Spain,7,"GDP per capita, price-adjusted","$57,034",51st,13,10,100.4,-2.5
+Spain,7,Minimum wage,$9.91/h,30th,13,10,100.4,-2.5
+Spain,7,Maternity leave,16.0 wks,1st,13,10,100.4,-2.5
+Spain,7,"All paid leave, mothers",16.0 wks,1st,13,10,100.4,-2.5
+Switzerland,8,Life expectancy,83.7 yrs,1st,12,7,39.4,+0.5
+Switzerland,8,Infant mortality,3.3,4th,12,7,39.4,+0.5
+Switzerland,8,Adult obesity,12.1%,1st,12,7,39.4,+0.5
+Switzerland,8,Homicide rate,0.38,1st,12,7,39.4,+0.5
+Switzerland,8,Gun deaths,2.53,1st,12,7,39.4,+0.5
+Switzerland,8,People in prison,82,1st,12,7,39.4,+0.5
+Switzerland,8,"Gun deaths, ages 1-19",0.18,1st,12,7,39.4,+0.5
+Switzerland,8,Road deaths,2.2,1st,12,7,39.4,+0.5
+Switzerland,8,GDP per capita,"$115,620",2nd,12,7,39.4,+0.5
+Switzerland,8,"GDP per capita, price-adjusted","$102,096",7th,12,7,39.4,+0.5
+Switzerland,8,Minimum wage,none,-,12,7,39.4,+0.5
+Switzerland,8,Maternity leave,8.1 wks,5th,12,7,39.4,+0.5
+Switzerland,8,"All paid leave, mothers",8.1 wks,5th,12,7,39.4,+0.5
+Norway,9,Life expectancy,82.5 yrs,1st,12,10,45,+9.3
+Norway,9,Infant mortality,2.1,1st,12,10,45,+9.3
+Norway,9,Adult obesity,16.0%,1st,12,10,45,+9.3
+Norway,9,Homicide rate,0.50,1st,12,10,45,+9.3
+Norway,9,Gun deaths,1.50,1st,12,10,45,+9.3
+Norway,9,People in prison,65,1st,12,10,45,+9.3
+Norway,9,"Gun deaths, ages 1-19",0.17,1st,12,10,45,+9.3
+Norway,9,Road deaths,2.0,1st,12,10,45,+9.3
+Norway,9,GDP per capita,"$94,468",12th,12,10,45,+9.3
+Norway,9,"GDP per capita, price-adjusted","$111,545",3rd,12,10,45,+9.3
+Norway,9,Minimum wage,none,-,12,10,45,+9.3
+Norway,9,Maternity leave,17.5 wks,1st,12,10,45,+9.3
+Norway,9,"All paid leave, mothers",39.3 wks,1st,12,10,45,+9.3
+Sweden,10,Life expectancy,83.1 yrs,1st,12,10,34.9,-1.4
+Sweden,10,Infant mortality,2.1,1st,12,10,34.9,-1.4
+Sweden,10,Adult obesity,17.3%,1st,12,10,34.9,-1.4
+Sweden,10,Homicide rate,1.05,1st,12,10,34.9,-1.4
+Sweden,10,Gun deaths,1.42,1st,12,10,34.9,-1.4
+Sweden,10,People in prison,63,1st,12,10,34.9,-1.4
+Sweden,10,"Gun deaths, ages 1-19",0.44,1st,12,10,34.9,-1.4
+Sweden,10,Road deaths,2.1,1st,12,10,34.9,-1.4
+Sweden,10,GDP per capita,"$62,662",49th,12,10,34.9,-1.4
+Sweden,10,"GDP per capita, price-adjusted","$74,081",43rd,12,10,34.9,-1.4
+Sweden,10,Minimum wage,none,-,12,10,34.9,-1.4
+Sweden,10,Maternity leave,10.0 wks,1st,12,10,34.9,-1.4
+Sweden,10,"All paid leave, mothers",34.4 wks,1st,12,10,34.9,-1.4
+Finland,11,Life expectancy,81.2 yrs,1st,12,8,89.3,-3.9
+Finland,11,Infant mortality,1.8,1st,12,8,89.3,-3.9
+Finland,11,Adult obesity,26.0%,2nd,12,8,89.3,-3.9
+Finland,11,Homicide rate,1.12,1st,12,8,89.3,-3.9
+Finland,11,Gun deaths,2.39,1st,12,8,89.3,-3.9
+Finland,11,People in prison,53,1st,12,8,89.3,-3.9
+Finland,11,"Gun deaths, ages 1-19",0.18,1st,12,8,89.3,-3.9
+Finland,11,Road deaths,3.8,1st,12,8,89.3,-3.9
+Finland,11,GDP per capita,"$56,464",50th,12,8,89.3,-3.9
+Finland,11,"GDP per capita, price-adjusted","$66,297",50th,12,8,89.3,-3.9
+Finland,11,Minimum wage,none,-,12,8,89.3,-3.9
+Finland,11,Maternity leave,5.7 wks,11th,12,8,89.3,-3.9
+Finland,11,"All paid leave, mothers",39.7 wks,1st,12,8,89.3,-3.9
+Russia,12,Life expectancy,72.5 yrs,50th,7,0,17.2,-3.9
+Russia,12,Infant mortality,3.7,5th,7,0,17.2,-3.9
+Russia,12,Homicide rate,4.98,22nd,7,0,17.2,-3.9
+Russia,12,People in prison,416,13th,7,0,17.2,-3.9
+Russia,12,"Gun deaths, ages 1-19",,n/a,7,0,17.2,-3.9
+Russia,12,GDP per capita,"$17,972",51st,7,0,17.2,-3.9
+Russia,12,"GDP per capita, price-adjusted","$50,255",51st,7,0,17.2,-3.9
+Russia,12,Minimum wage,$1.86/h,51st,7,0,17.2,-3.9
+Russia,12,Maternity leave,not reported,-,7,0,17.2,-3.9
+Russia,12,"All paid leave, mothers",not reported,-,7,0,17.2,-3.9
+Japan,13,Life expectancy,84.1 yrs,1st,12,8,206.5,-1.1
+Japan,13,Infant mortality,1.8,1st,12,8,206.5,-1.1
+Japan,13,Homicide rate,0.24,1st,12,8,206.5,-1.1
+Japan,13,Gun deaths,0.01,1st,12,8,206.5,-1.1
+Japan,13,People in prison,40,1st,12,8,206.5,-1.1
+Japan,13,"Gun deaths, ages 1-19",0.00,1st,12,8,206.5,-1.1
+Japan,13,Road deaths,3.1,1st,12,8,206.5,-1.1
+Japan,13,GDP per capita,"$35,973",51st,12,8,206.5,-1.1
+Japan,13,"GDP per capita, price-adjusted","$56,854",51st,12,8,206.5,-1.1
+Japan,13,Minimum wage,$7.20/h,51st,12,8,206.5,-1.1
+Japan,13,Maternity leave,9.4 wks,2nd,12,8,206.5,-1.1
+Japan,13,"All paid leave, mothers",36.3 wks,1st,12,8,206.5,-1.1
+South Korea,14,Life expectancy,82.7 yrs,1st,13,9,52.3,-1.4
+South Korea,14,Infant mortality,2.5,1st,13,9,52.3,-1.4
+South Korea,14,Adult obesity,5.3%,1st,13,9,52.3,-1.4
+South Korea,14,Homicide rate,0.79,1st,13,9,52.3,-1.4
+South Korea,14,Gun deaths,0.02,1st,13,9,52.3,-1.4
+South Korea,14,People in prison,108,1st,13,9,52.3,-1.4
+South Korea,14,"Gun deaths, ages 1-19",0.01,1st,13,9,52.3,-1.4
+South Korea,14,Road deaths,6.5,4th,13,9,52.3,-1.4
+South Korea,14,GDP per capita,"$36,227",51st,13,9,52.3,-1.4
+South Korea,14,"GDP per capita, price-adjusted","$65,405",50th,13,9,52.3,-1.4
+South Korea,14,Minimum wage,$7.46/h,31st,13,9,52.3,-1.4
+South Korea,14,Maternity leave,10.5 wks,1st,13,9,52.3,-1.4
+South Korea,14,"All paid leave, mothers",47.6 wks,1st,13,9,52.3,-1.4
+Canada,15,Life expectancy,81.3 yrs,1st,13,7,113.5,-1.8
+Canada,15,Infant mortality,4.6,12th,13,7,113.5,-1.8
+Canada,15,Adult obesity,24.0%,1st,13,7,113.5,-1.8
+Canada,15,Homicide rate,1.43,2nd,13,7,113.5,-1.8
+Canada,15,Gun deaths,2.33,1st,13,7,113.5,-1.8
+Canada,15,People in prison,108,1st,13,7,113.5,-1.8
+Canada,15,"Gun deaths, ages 1-19",0.73,1st,13,7,113.5,-1.8
+Canada,15,Road deaths,4.7,1st,13,7,113.5,-1.8
+Canada,15,GDP per capita,"$55,765",51st,13,7,113.5,-1.8
+Canada,15,"GDP per capita, price-adjusted","$67,013",50th,13,7,113.5,-1.8
+Canada,15,Minimum wage,$11.98/h,25th,13,7,113.5,-1.8
+Canada,15,Maternity leave,5.8 wks,11th,13,7,113.5,-1.8
+Canada,15,"All paid leave, mothers",20.1 wks,1st,13,7,113.5,-1.8
+Australia,16,Life expectancy,83.2 yrs,1st,13,7,51.0,-2.8
+Australia,16,Infant mortality,3.2,3rd,13,7,51.0,-2.8
+Australia,16,Adult obesity,25.4%,2nd,13,7,51.0,-2.8
+Australia,16,Homicide rate,0.99,1st,13,7,51.0,-2.8
+Australia,16,Gun deaths,0.96,1st,13,7,51.0,-2.8
+Australia,16,People in prison,172,1st,13,7,51.0,-2.8
+Australia,16,"Gun deaths, ages 1-19",0.10,1st,13,7,51.0,-2.8
+Australia,16,Road deaths,4.7,1st,13,7,51.0,-2.8
+Australia,16,GDP per capita,"$66,352",47th,13,7,51.0,-2.8
+Australia,16,"GDP per capita, price-adjusted","$72,132",48th,13,7,51.0,-2.8
+Australia,16,Minimum wage,$17.74/h,1st,13,7,51.0,-2.8
+Australia,16,Maternity leave,0.9 wks,13th,13,7,51.0,-2.8
+Australia,16,"All paid leave, mothers",9.2 wks,3rd,13,7,51.0,-2.8
+Portugal,17,Life expectancy,81.8 yrs,1st,13,8,89.9,+0.3
+Portugal,17,Infant mortality,2.5,1st,13,8,89.9,+0.3
+Portugal,17,Adult obesity,15.9%,1st,13,8,89.9,+0.3
+Portugal,17,Homicide rate,0.87,1st,13,8,89.9,+0.3
+Portugal,17,Gun deaths,0.97,1st,13,8,89.9,+0.3
+Portugal,17,People in prison,125,1st,13,8,89.9,+0.3
+Portugal,17,"Gun deaths, ages 1-19",0.11,1st,13,8,89.9,+0.3
+Portugal,17,Road deaths,6.7,4th,13,8,89.9,+0.3
+Portugal,17,GDP per capita,"$32,166",51st,13,8,89.9,+0.3
+Portugal,17,"GDP per capita, price-adjusted","$50,269",51st,13,8,89.9,+0.3
+Portugal,17,Minimum wage,$7.29/h,31st,13,8,89.9,+0.3
+Portugal,17,Maternity leave,6.0 wks,10th,13,8,89.9,+0.3
+Portugal,17,"All paid leave, mothers",22.3 wks,1st,13,8,89.9,+0.3
+Netherlands,18,Life expectancy,81.7 yrs,1st,13,9,43.3,-1.8
+Netherlands,18,Infant mortality,3.6,4th,13,9,43.3,-1.8
+Netherlands,18,Adult obesity,15.2%,1st,13,9,43.3,-1.8
+Netherlands,18,Homicide rate,0.62,1st,13,9,43.3,-1.8
+Netherlands,18,Gun deaths,0.36,1st,13,9,43.3,-1.8
+Netherlands,18,People in prison,63,1st,13,9,43.3,-1.8
+Netherlands,18,"Gun deaths, ages 1-19",0.08,1st,13,9,43.3,-1.8
+Netherlands,18,Road deaths,3.8,1st,13,9,43.3,-1.8
+Netherlands,18,GDP per capita,"$73,833",38th,13,9,43.3,-1.8
+Netherlands,18,"GDP per capita, price-adjusted","$84,738",27th,13,9,43.3,-1.8
+Netherlands,18,Minimum wage,$16.89/h,4th,13,9,43.3,-1.8
+Netherlands,18,Maternity leave,16.0 wks,1st,13,9,43.3,-1.8
+Netherlands,18,"All paid leave, mothers",22.3 wks,1st,13,9,43.3,-1.8
+Belgium,19,Life expectancy,81.8 yrs,1st,13,8,106.3,-5.3
+Belgium,19,Infant mortality,3.1,2nd,13,8,106.3,-5.3
+Belgium,19,Adult obesity,17.0%,1st,13,8,106.3,-5.3
+Belgium,19,Homicide rate,0.83,1st,13,8,106.3,-5.3
+Belgium,19,Gun deaths,1.37,1st,13,8,106.3,-5.3
+Belgium,19,People in prison,90,1st,13,8,106.3,-5.3
+Belgium,19,"Gun deaths, ages 1-19",0.20,1st,13,8,106.3,-5.3
+Belgium,19,Road deaths,5.6,4th,13,8,106.3,-5.3
+Belgium,19,GDP per capita,"$61,002",50th,13,8,106.3,-5.3
+Belgium,19,"GDP per capita, price-adjusted","$76,208",38th,13,8,106.3,-5.3
+Belgium,19,Minimum wage,$15.02/h,12th,13,8,106.3,-5.3
+Belgium,19,Maternity leave,11.6 wks,1st,13,8,106.3,-5.3
+Belgium,19,"All paid leave, mothers",15.1 wks,1st,13,8,106.3,-5.3
+Austria,20,Life expectancy,81.4 yrs,1st,11,9,80.5,-4.5
+Austria,20,Infant mortality,2.8,1st,11,9,80.5,-4.5
+Austria,20,Homicide rate,0.52,1st,11,9,80.5,-4.5
+Austria,20,Gun deaths,2.88,1st,11,9,80.5,-4.5
+Austria,20,People in prison,98,1st,11,9,80.5,-4.5
+Austria,20,"Gun deaths, ages 1-19",0.24,1st,11,9,80.5,-4.5
+Austria,20,Road deaths,4.7,1st,11,9,80.5,-4.5
+Austria,20,GDP per capita,"$63,161",49th,11,9,80.5,-4.5
+Austria,20,"GDP per capita, price-adjusted","$75,825",39th,11,9,80.5,-4.5
+Austria,20,Minimum wage,none,-,11,9,80.5,-4.5
+Austria,20,Maternity leave,16.0 wks,1st,11,9,80.5,-4.5
+Austria,20,"All paid leave, mothers",46.5 wks,1st,11,9,80.5,-4.5
+Hungary,21,Life expectancy,76.0 yrs,35th,13,7,75.2,-4.7
+Hungary,21,Infant mortality,3.0,2nd,13,7,75.2,-4.7
+Hungary,21,Adult obesity,22.2%,1st,13,7,75.2,-4.7
+Hungary,21,Homicide rate,0.82,1st,13,7,75.2,-4.7
+Hungary,21,Gun deaths,0.61,1st,13,7,75.2,-4.7
+Hungary,21,People in prison,167,1st,13,7,75.2,-4.7
+Hungary,21,"Gun deaths, ages 1-19",0.00,1st,13,7,75.2,-4.7
+Hungary,21,Road deaths,6.2,4th,13,7,75.2,-4.7
+Hungary,21,GDP per capita,"$25,826",51st,13,7,75.2,-4.7
+Hungary,21,"GDP per capita, price-adjusted","$48,239",51st,13,7,75.2,-4.7
+Hungary,21,Minimum wage,$5.36/h,51st,13,7,75.2,-4.7
+Hungary,21,Maternity leave,24.0 wks,1st,13,7,75.2,-4.7
+Hungary,21,"All paid leave, mothers",75.9 wks,1st,13,7,75.2,-4.7
+Ireland,22,Life expectancy,82.6 yrs,1st,13,9,32.9,+1.5
+Ireland,22,Infant mortality,3.0,2nd,13,9,32.9,+1.5
+Ireland,22,Adult obesity,21.3%,1st,13,9,32.9,+1.5
+Ireland,22,Homicide rate,0.26,1st,13,9,32.9,+1.5
+Ireland,22,Gun deaths,0.34,1st,13,9,32.9,+1.5
+Ireland,22,People in prison,80,1st,13,9,32.9,+1.5
+Ireland,22,"Gun deaths, ages 1-19",0.00,1st,13,9,32.9,+1.5
+Ireland,22,Road deaths,2.8,1st,13,9,32.9,+1.5
+Ireland,22,GDP per capita,"$130,652",1st,13,9,32.9,+1.5
+Ireland,22,"GDP per capita, price-adjusted","$152,632",1st,13,9,32.9,+1.5
+Ireland,22,Minimum wage,$16.25/h,4th,13,9,32.9,+1.5
+Ireland,22,Maternity leave,6.1 wks,10th,13,9,32.9,+1.5
+Ireland,22,"All paid leave, mothers",8.2 wks,4th,13,9,32.9,+1.5
+Czechia,23,Life expectancy,79.0 yrs,9th,12,7,44.6,-2.0
+Czechia,23,Infant mortality,2.2,1st,12,7,44.6,-2.0
+Czechia,23,Homicide rate,0.73,1st,12,7,44.6,-2.0
+Czechia,23,Gun deaths,1.83,1st,12,7,44.6,-2.0
+Czechia,23,People in prison,203,1st,12,7,44.6,-2.0
+Czechia,23,"Gun deaths, ages 1-19",0.10,1st,12,7,44.6,-2.0
+Czechia,23,Road deaths,5.8,4th,12,7,44.6,-2.0
+Czechia,23,GDP per capita,"$35,678",51st,12,7,44.6,-2.0
+Czechia,23,"GDP per capita, price-adjusted","$60,247",51st,12,7,44.6,-2.0
+Czechia,23,Minimum wage,$6.25/h,51st,12,7,44.6,-2.0
+Czechia,23,Maternity leave,17.5 wks,1st,12,7,44.6,-2.0
+Czechia,23,"All paid leave, mothers",50.6 wks,1st,12,7,44.6,-2.0
+Latvia,24,Life expectancy,74.5 yrs,42nd,13,7,46.9,-4.0
+Latvia,24,Infant mortality,2.6,1st,13,7,46.9,-4.0
+Latvia,24,Adult obesity,24.0%,1st,13,7,46.9,-4.0
+Latvia,24,Homicide rate,3.24,13th,13,7,46.9,-4.0
+Latvia,24,Gun deaths,1.20,1st,13,7,46.9,-4.0
+Latvia,24,People in prison,195,1st,13,7,46.9,-4.0
+Latvia,24,"Gun deaths, ages 1-19",0.00,1st,13,7,46.9,-4.0
+Latvia,24,Road deaths,7.0,4th,13,7,46.9,-4.0
+Latvia,24,GDP per capita,"$26,116",51st,13,7,46.9,-4.0
+Latvia,24,"GDP per capita, price-adjusted","$43,509",51st,13,7,46.9,-4.0
+Latvia,24,Minimum wage,$5.30/h,51st,13,7,46.9,-4.0
+Latvia,24,Maternity leave,12.8 wks,1st,13,7,46.9,-4.0
+Latvia,24,"All paid leave, mothers",43.9 wks,1st,13,7,46.9,-4.0
+Lithuania,25,Life expectancy,75.8 yrs,37th,13,7,39.8,-2.2
+Lithuania,25,Infant mortality,2.8,1st,13,7,39.8,-2.2
+Lithuania,25,Adult obesity,20.3%,1st,13,7,39.8,-2.2
+Lithuania,25,Homicide rate,2.22,5th,13,7,39.8,-2.2
+Lithuania,25,Gun deaths,1.07,1st,13,7,39.8,-2.2
+Lithuania,25,People in prison,235,1st,13,7,39.8,-2.2
+Lithuania,25,"Gun deaths, ages 1-19",0.00,1st,13,7,39.8,-2.2
+Lithuania,25,Road deaths,6.6,4th,13,7,39.8,-2.2
+Lithuania,25,GDP per capita,"$32,839",51st,13,7,39.8,-2.2
+Lithuania,25,"GDP per capita, price-adjusted","$57,818",51st,13,7,39.8,-2.2
+Lithuania,25,Minimum wage,$8.09/h,31st,13,7,39.8,-2.2
+Lithuania,25,Maternity leave,14.0 wks,1st,13,7,39.8,-2.2
+Lithuania,25,"All paid leave, mothers",52.5 wks,1st,13,7,39.8,-2.2
+Estonia,26,Life expectancy,78.1 yrs,16th,13,8,24.2,-1.3
+Estonia,26,Infant mortality,1.7,1st,13,8,24.2,-1.3
+Estonia,26,Adult obesity,19.9%,1st,13,8,24.2,-1.3
+Estonia,26,Homicide rate,1.96,4th,13,8,24.2,-1.3
+Estonia,26,Gun deaths,1.36,1st,13,8,24.2,-1.3
+Estonia,26,People in prison,191,1st,13,8,24.2,-1.3
+Estonia,26,"Gun deaths, ages 1-19",0.00,1st,13,8,24.2,-1.3
+Estonia,26,Road deaths,3.9,1st,13,8,24.2,-1.3
+Estonia,26,GDP per capita,"$34,325",51st,13,8,24.2,-1.3
+Estonia,26,"GDP per capita, price-adjusted","$49,492",51st,13,8,24.2,-1.3
+Estonia,26,Minimum wage,$6.10/h,51st,13,8,24.2,-1.3
+Estonia,26,Maternity leave,14.3 wks,1st,13,8,24.2,-1.3
+Estonia,26,"All paid leave, mothers",82.1 wks,1st,13,8,24.2,-1.3
+Croatia,27,Life expectancy,77.7 yrs,21st,12,6,55.9,-2.9
+Croatia,27,Infant mortality,3.9,6th,12,6,55.9,-2.9
+Croatia,27,Homicide rate,0.81,1st,12,6,55.9,-2.9
+Croatia,27,Gun deaths,2.18,1st,12,6,55.9,-2.9
+Croatia,27,People in prison,78,1st,12,6,55.9,-2.9
+Croatia,27,"Gun deaths, ages 1-19",0.14,1st,12,6,55.9,-2.9
+Croatia,27,Road deaths,7.5,6th,12,6,55.9,-2.9
+Croatia,27,GDP per capita,"$27,376",51st,12,6,55.9,-2.9
+Croatia,27,"GDP per capita, price-adjusted","$51,593",51st,12,6,55.9,-2.9
+Croatia,27,Minimum wage,$6.97/h,51st,12,6,55.9,-2.9
+Croatia,27,Maternity leave,30.0 wks,1st,12,6,55.9,-2.9
+Croatia,27,"All paid leave, mothers",56.0 wks,1st,12,6,55.9,-2.9
+Greece,28,Life expectancy,80.8 yrs,1st,13,8,145.7,+1.3
+Greece,28,Infant mortality,3.4,4th,13,8,145.7,+1.3
+Greece,28,Adult obesity,12.2%,1st,13,8,145.7,+1.3
+Greece,28,Homicide rate,0.87,1st,13,8,145.7,+1.3
+Greece,28,Gun deaths,1.41,1st,13,8,145.7,+1.3
+Greece,28,People in prison,93,1st,13,8,145.7,+1.3
+Greece,28,"Gun deaths, ages 1-19",0.10,1st,13,8,145.7,+1.3
+Greece,28,Road deaths,6.4,4th,13,8,145.7,+1.3
+Greece,28,GDP per capita,"$27,041",51st,13,8,145.7,+1.3
+Greece,28,"GDP per capita, price-adjusted","$44,981",51st,13,8,145.7,+1.3
+Greece,28,Minimum wage,$6.81/h,51st,13,8,145.7,+1.3
+Greece,28,Maternity leave,33.3 wks,1st,13,8,145.7,+1.3
+Greece,28,"All paid leave, mothers",37.0 wks,1st,13,8,145.7,+1.3
+Bosnia,29,"Gun deaths, ages 1-19",0.00,1st,4,1,29.9,-2.4
+Bosnia,29,Road deaths,7.7,6th,4,1,29.9,-2.4
+Bosnia,29,GDP per capita,"$9,568",51st,4,1,29.9,-2.4
+Bosnia,29,"GDP per capita, price-adjusted","$22,887",51st,4,1,29.9,-2.4
+Bosnia,29,Minimum wage,keine_vergleichbare_quelle/h,n/a,4,1,29.9,-2.4
+Bosnia,29,Maternity leave,nicht_in_quellreihe_enthalten wks,n/a,4,1,29.9,-2.4
+Bosnia,29,"All paid leave, mothers",nicht_in_quellreihe_enthalten wks,n/a,4,1,29.9,-2.4
+Israel,30,Life expectancy,82.8 yrs,1st,13,9,68.5,-5.2
+Israel,30,Infant mortality,2.7,1st,13,9,68.5,-5.2
+Israel,30,Adult obesity,19.9%,1st,13,9,68.5,-5.2
+Israel,30,Homicide rate,1.56,2nd,13,9,68.5,-5.2
+Israel,30,Gun deaths,1.34,1st,13,9,68.5,-5.2
+Israel,30,People in prison,234,1st,13,9,68.5,-5.2
+Israel,30,"Gun deaths, ages 1-19",0.36,1st,13,9,68.5,-5.2
+Israel,30,Road deaths,3.9,1st,13,9,68.5,-5.2
+Israel,30,GDP per capita,"$60,335",50th,13,9,68.5,-5.2
+Israel,30,"GDP per capita, price-adjusted","$56,528",51st,13,9,68.5,-5.2
+Israel,30,Minimum wage,$11.07/h,27th,13,9,68.5,-5.2
+Israel,30,Maternity leave,15.0 wks,1st,13,9,68.5,-5.2
+Israel,30,"All paid leave, mothers",15.0 wks,1st,13,9,68.5,-5.2
+South Africa,31,Life expectancy,65.5 yrs,51st,7,0,78.6,-5.8
+South Africa,31,Infant mortality,24.4,51st,7,0,78.6,-5.8
+South Africa,31,Homicide rate,12.85,-,7,0,78.6,-5.8
+South Africa,31,Gun deaths,14.15,25th,7,0,78.6,-5.8
+South Africa,31,People in prison,286,7th,7,0,78.6,-5.8
+South Africa,31,GDP per capita,"$6,769",51st,7,0,78.6,-5.8
+South Africa,31,"GDP per capita, price-adjusted","$16,326",51st,7,0,78.6,-5.8
+South Africa,31,Minimum wage,$1.77/h,51st,7,0,78.6,-5.8
+Brazil,32,Life expectancy,74.9 yrs,42nd,8,0,93.3,-8.1
+Brazil,32,Infant mortality,12.5,51st,8,0,93.3,-8.1
+Brazil,32,Homicide rate,20.97,51st,8,0,93.3,-8.1
+Brazil,32,Gun deaths,16.83,32nd,8,0,93.3,-8.1
+Brazil,32,People in prison,354,10th,8,0,93.3,-8.1
+Brazil,32,GDP per capita,"$10,686",51st,8,0,93.3,-8.1
+Brazil,32,"GDP per capita, price-adjusted","$23,381",51st,8,0,93.3,-8.1
+Brazil,32,Minimum wage,$1.34/h,51st,8,0,93.3,-8.1
+Mexico,33,Life expectancy,75.2 yrs,40th,10,3,61.8,-4.9
+Mexico,33,Infant mortality,13.4,51st,10,3,61.8,-4.9
+Mexico,33,Homicide rate,28.23,51st,10,3,61.8,-4.9
+Mexico,33,Gun deaths,21.68,44th,10,3,61.8,-4.9
+Mexico,33,People in prison,156,1st,10,3,61.8,-4.9
+Mexico,33,GDP per capita,"$13,741",51st,10,3,61.8,-4.9
+Mexico,33,"GDP per capita, price-adjusted","$25,682",51st,10,3,61.8,-4.9
+Mexico,33,Minimum wage,$2.29/h,51st,10,3,61.8,-4.9
+Mexico,33,Maternity leave,12.0 wks,1st,10,3,61.8,-4.9
+Mexico,33,"All paid leave, mothers",12.0 wks,1st,10,3,61.8,-4.9
+India,34,Life expectancy,71.7 yrs,51st,6,2,84.1,-7.4
+India,34,Infant mortality,24.5,51st,6,2,84.1,-7.4
+India,34,People in prison,34,1st,6,2,84.1,-7.4
+India,34,GDP per capita,"$2,675",51st,6,2,84.1,-7.4
+India,34,"GDP per capita, price-adjusted","$11,789",51st,6,2,84.1,-7.4
+India,34,Minimum wage,kein_einheitlicher_nationaler_satz/h,n/a,6,2,84.1,-7.4
+India,34,Maternity leave,26.0 wks,1st,6,2,84.1,-7.4
+India,34,"All paid leave, mothers",nicht_in_quellreihe_enthalten wks,n/a,6,2,84.1,-7.4
+Serbia,35,Life expectancy,75.2 yrs,40th,10,4,42.4,-2.2
+Serbia,35,Infant mortality,4.5,11th,10,4,42.4,-2.2
+Serbia,35,Homicide rate,1.24,1st,10,4,42.4,-2.2
+Serbia,35,Gun deaths,2.38,1st,10,4,42.4,-2.2
+Serbia,35,People in prison,156,1st,10,4,42.4,-2.2
+Serbia,35,Road deaths,7.7,6th,10,4,42.4,-2.2
+Serbia,35,GDP per capita,"$15,284",51st,10,4,42.4,-2.2
+Serbia,35,"GDP per capita, price-adjusted","$32,724",51st,10,4,42.4,-2.2
+Serbia,35,Minimum wage,$4.91/h,51st,10,4,42.4,-2.2
+Serbia,35,Maternity leave,20.0 wks,1st,10,4,42.4,-2.2
+Serbia,35,"All paid leave, mothers",nicht_in_quellreihe_enthalten wks,n/a,10,4,42.4,-2.2
