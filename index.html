@@ -28,8 +28,8 @@ states on thirteen metrics.">
 <link rel="canonical" href="https://mapgap.eu/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.ico" sizes="32x32">
-<meta name="theme-color" content="#FBFAF7" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#15171C" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FBFAF7">
+<meta name="color-scheme" content="light">
 <script type="application/ld+json">{
  "@context": "https://schema.org",
  "@type": "Article",
@@ -78,7 +78,7 @@ body{margin:0;background:var(--bg);color:var(--fg);
    Deshalb dunkle Schrift oben und ein heller Verlauf, der nur den Himmel
    aufhellt und die Silhouetten frei laesst. */
 header.top{position:relative;border-bottom:1px solid var(--rule);padding:0;margin-bottom:0;
- display:flex;align-items:flex-start;min-height:clamp(560px,43vw,700px);
+ display:flex;align-items:flex-start;min-height:max(560px,42.85vw);
  background:#C4CBD3 url('hero.webp') center top/cover no-repeat}
 /* Kein Schleier ueber die ganze obere Haelfte (wirkte wie Nebel, Mike 23.09.).
    Der Himmel ist in der Mitte ohnehin hell genug fuer dunkle Schrift; es bleibt
@@ -96,26 +96,36 @@ header.top h1,header.top .stand{text-shadow:0 0 18px rgba(251,250,247,.55)}
 header.top .stand{font-weight:500;
  text-shadow:0 0 2px rgba(251,250,247,.95),0 0 7px rgba(251,250,247,.85),
   0 0 16px rgba(251,250,247,.6)}
-@media(max-width:640px){
- header.top .stand{font-size:17px;line-height:1.38}}
 header.top>.eyebrow{text-shadow:0 0 10px rgba(251,250,247,.7)}
 header.top .wrap{position:relative;z-index:1;width:100%;text-align:center;
  padding-top:26px;padding-bottom:0}
-/* Titel und Unterzeile zwei Stufen kleiner als im Fliesstext-Massstab, damit der
-   Block ganz in den offenen Himmel passt. */
+/* Titel zwei Stufen kleiner, damit der Block in den offenen Himmel passt. Die
+   Unterzeile ist seit 23.09. nur noch "What survives the data" - daher deutlich
+   groesser als die frueheren 19px (Mike). */
 header.top h1{font-size:clamp(34px,6.4vw,60px);margin:0 0 14px}
-header.top .stand{font-size:19px;margin:0 auto;max-width:31em}
+header.top .stand{font-size:clamp(24px,2.5vw,34px);line-height:1.2;margin:0 auto;max-width:24em}
 /* Kennung links oben in der Ecke, nicht ueber dem Titel. */
 header.top>.eyebrow{position:absolute;top:20px;left:26px;z-index:2}
-/* Die Datenzeile steht unten auf dem dunklen Board im Vordergrund - dort traegt
-   Weiss (gemessene Helligkeit der unteren 30 Prozent: 61-90 von 255). */
-header.top>.byline{position:absolute;left:0;right:0;bottom:16px;z-index:2;
- margin:0;padding:0 20px;text-align:center;color:#fff;line-height:1.5;
+/* Die zwei weissen Zeilen stehen MITTIG im dunklen Streifen am unteren Bildrand.
+   Gemessen am Bild: Streifen von 92 % bis 100 % der Hoehe (Helligkeit ~38), darueber
+   bei 89-91 % die helle Brustungskante. Mitte des Streifens = 96 %, also 4 % vom
+   unteren Rand; minus die halbe Blockhoehe (2 Zeilen x 1.35em / 2). Weil der Hero
+   das Seitenverhaeltnis des Bildes haelt, stimmt das bei jeder Breite. */
+header.top>.byline{position:absolute;left:0;right:0;bottom:calc(4% - 1.35em);z-index:2;
+ margin:0;padding:0 20px;text-align:center;color:#fff;line-height:1.35;
  text-shadow:0 1px 10px rgba(0,0,0,.6)}
-header.top>.byline .au{font-weight:600}
+/* Beide Zeilen sind rechnerisch zentriert; unruhig wirkten sie durch Gewicht links
+   (fetter Name) und Unterstreichung rechts. Name steht jetzt unter dem Untertitel,
+   der Link ist erst beim Darueberfahren unterstrichen. */
+/* Autor unter dem Untertitel, im Himmel, dunkel wie der Titel. */
+header.top .autor{font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:14px;
+ letter-spacing:1.6px;text-transform:uppercase;font-weight:600;color:var(--fg);
+ margin:24px 0 0;text-shadow:0 0 2px rgba(251,250,247,.95),0 0 8px rgba(251,250,247,.8)}
 header.top>.byline .nw{white-space:nowrap}
-@media(max-width:640px){header.top>.byline{font-size:12.5px;bottom:12px}
- header.top .wrap{padding-top:50px}}
+@media(max-width:640px){header.top>.byline{font-size:12.5px}
+ header.top .wrap{padding-top:50px}
+ header.top .stand{font-size:23px}
+ header.top .autor{margin-top:18px;font-size:13px}}
 .rule{height:1px;background:var(--rule);margin:0 0 40px}
 .eyebrow{font-size:13px;letter-spacing:2.4px;text-transform:uppercase;color:var(--mut);font-weight:500}
 h1{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(44px,9vw,82px);
@@ -256,32 +266,19 @@ h2[id],h3[id],#summary{scroll-margin-top:18px}
  text-transform:uppercase;color:var(--mut);font-weight:600;margin-bottom:10px}
 .tldr ul{margin:0;padding:0 0 0 20px;font-size:19px;line-height:1.5}
 .tldr li{margin:0 0 12px}
-.tldr .nach{font-size:16.5px;line-height:1.5;color:var(--mut);margin:4px 0 12px;
- padding-top:10px;border-top:1px solid var(--line)}
+/* Liste der acht Ausschluesse im Postscript hinter dem Fazit. */
+ol.excluded{margin:0 0 24px;padding:0 0 0 24px;font-size:18px;line-height:1.5}
+ol.excluded li{margin:0 0 7px}
 .cite{font-size:17px;line-height:1.5;padding:12px 16px;background:var(--panel);
  border:1px solid var(--line);border-radius:3px;overflow-wrap:anywhere}
-header.top>.byline a{color:inherit;text-decoration:underline;
- text-decoration-color:rgba(255,255,255,.45);text-underline-offset:2px}
+header.top>.byline a{color:inherit;text-decoration:none}
+header.top>.byline a:hover{text-decoration:underline;
+ text-decoration-color:rgba(255,255,255,.6);text-underline-offset:2px}
 
-/* Dunkelmodus nur am Bildschirm; Druck und PDF bleiben hell. */
-@media screen and (prefers-color-scheme:dark){
- :root{--bg:#15171C;--fg:#E7E5DF;--mut:#A7ACB5;--dim:#9DA2AC;--acc:#E7E5DF;
-  --gut:#62A89F;--mittel:#9E998D;--schlecht:#D38C60;
-  --line:#2A2D34;--panel:#1C1F25;--rule:#3B3F47;--band:rgba(231,229,223,.075)}
- /* Der Hero bleibt hell: dunkle Schrift auf aufgehelltem Himmel. Ohne diesen
-    Block wuerde der Titel die helle Textfarbe erben und verschwinden. */
- header.top{--fg:#14151A;--mut:#585E6A;--dim:#646A74;color:var(--fg)}
- a{color:#CDD1D8;text-decoration-color:#5C616A}
- a:hover{color:#fff;text-decoration-color:#fff}
- strong{color:#fff}
- .pq,.lead{border-left-color:var(--fg)}
- .row .nm,.crow .l,.how b{color:var(--fg)}
- .row.us .bar,.row.us .dot{background:var(--fg)}
- .bandbox{border-left-color:rgba(231,229,223,.24);border-right-color:rgba(231,229,223,.24)}
- .flags img{box-shadow:0 0 0 1px rgba(231,229,223,.22)}
- .dl a:hover{border-color:var(--fg)}
- .gap{background:#2B1F24}
-}
+/* Kein Dunkelmodus (Mike, 23.09.): Die Seite ist als helles Papier gestaltet und
+   sieht fuer alle Leser gleich aus. color-scheme:light verhindert zusaetzlich, dass
+   Browser Formularelemente oder Scrollbalken dunkel einfaerben. */
+:root{color-scheme:light}
 
 @media print{
  @page{size:A4;margin:18mm 16mm}
@@ -296,6 +293,7 @@ header.top>.byline a{color:inherit;text-decoration:underline;
  header.top .wrap{padding-top:0;padding-bottom:0;text-align:left}
  header.top h1{font-size:34pt;margin:8pt 0 10pt}
  header.top .stand{max-width:none;font-size:13pt;background:none;padding:0;text-shadow:none}
+ header.top .autor{font-size:10pt;text-shadow:none;margin-top:4pt}
  header.top h1,header.top>.eyebrow{text-shadow:none}
  header.top>.eyebrow{position:static}
  header.top>.byline{position:static;padding:0;text-align:left;color:var(--dim);
@@ -371,17 +369,16 @@ header.top>.byline a{color:inherit;text-decoration:underline;
 <div class="eyebrow">mapgap.eu</div>
 <div class="wrap">
 <h1>Fifty States,<br>Thirty-Five Countries</h1>
-<p class="stand">A measurement exercise: what happens when a rhetorical comparison is tested
-against the data &mdash; and which parts survive</p>
+<p class="stand">What survives the data</p>
+<p class="autor">By Michael H. Zachrau</p>
 </div>
-<p class="byline"><span class="au nw">Michael H. Zachrau</span> &middot;
-<span class="nw"><time datetime="2026-09-18">18 September 2026</time>,</span>
-<a class="nw" href="#changes">updated <time datetime="2026-09-23">23 September 2026</time></a><br>35 countries &middot;
+<p class="byline"><span class="nw"><time datetime="2026-09-18">18 September 2026</time></span>
+&middot; <a class="nw" href="#changes">updated <time datetime="2026-09-23">23 September 2026</time></a><br>35 countries &middot;
 13 metrics &middot; all sources listed</p>
 </header>
 
 <div class="wrap">
-<section class="tldr" id="summary" aria-label="Summary"><div class="k">TL;DR</div><ul><li>On things governments can directly change &mdash; guns, prisons, paid leave, road safety &mdash; the countries in this study beat the American states almost without exception, often by enormous margins.</li><li>On GDP per head, the ranking flips. Even the poorest US state produces more than almost every country in the sample.</li><li>But output is not income, distribution or welfare. The American advantage shrinks sharply at the median &mdash; and against Germany, it reverses.</li><li>That leaves the more interesting question: how can a country produce so much, yet convert so little of that advantage into broadly shared outcomes?</li></ul><p class="nach">Eight apparently useful comparisons were discarded because the underlying measurements did not match. That is part of the result too.</p></section>
+<section class="tldr" id="summary" aria-label="Summary"><div class="k">TL;DR</div><ul><li>On things governments can directly change &mdash; guns, prisons, paid leave, road safety &mdash; the countries in this study beat the American states almost without exception, often by enormous margins.</li><li>On GDP per head, the ranking flips. Even the poorest US state produces more than almost every country in the sample.</li><li>But output is not income, distribution or welfare. The American advantage shrinks sharply at the median &mdash; and against Germany, it reverses.</li><li>That leaves the more interesting question: how can a country produce so much, yet convert so little of that advantage into broadly shared outcomes?</li></ul></section>
 <h2 id="premise">The device, taken literally</h2>
 <p>A chart circulated widely this year. It set Germany's social statistics against the fifty
 American states and gave each one a rank: life expectancy, first; homicide, first; gun deaths,
@@ -398,7 +395,7 @@ that measure the same thing on both sides of the comparison. Rank one means bett
 states. Rank fifty-one means worse than every one of them. The District of Columbia is reported
 where it is informative and never counted among the fifty: it is a city, and a city of a particular
 kind.</p>
-<nav class="toc" aria-label="Contents"><div class="k">Contents</div><ol><li><a href="#premise">The device, taken literally</a></li><li><a href="#notclose">Where the answer is not close</a></li><li><a href="#reverses">Where it reverses</a></li><li><a href="#pandemic">The metric that fits neither family</a></li><li><a href="#income">The income question</a></li><li><a href="#traps">What the traps cost</a></li><li><a href="#cannot">What cannot be compared</a></li><li><a href="#notreporting">Four ways of not reporting</a></li><li><a href="#conclusion">What the exercise measures</a></li><li><a href="#closing">Conclusion</a></li><li><a href="#sources">Sources and method</a></li><li><a href="#downloads">Take the data</a></li><li><a href="#cards">All 35 countries</a></li><li><a href="#legal">Legal notice</a></li></ol></nav>
+<nav class="toc" aria-label="Contents"><div class="k">Contents</div><ol><li><a href="#premise">The device, taken literally</a></li><li><a href="#notclose">Where the answer is not close</a></li><li><a href="#reverses">Where it reverses</a></li><li><a href="#pandemic">The metric that fits neither family</a></li><li><a href="#income">The income question</a></li><li><a href="#traps">What the traps cost</a></li><li><a href="#cannot">What cannot be compared</a></li><li><a href="#notreporting">Four ways of not reporting</a></li><li><a href="#conclusion">What the exercise measures</a></li><li><a href="#closing">Conclusion</a></li><li><a href="#postscript">Postscript on excluded measures</a></li><li><a href="#sources">Sources and method</a></li><li><a href="#downloads">Take the data</a></li><li><a href="#cards">All 35 countries</a></li><li><a href="#legal">Legal notice</a></li></ol></nav>
 <p>The thirty-five are a selection, not a population, and it is worth saying so rather than
 inventing a rule they satisfy. They comprise the larger European economies, the Nordic and Baltic
 states, and the non-European rich democracies &mdash; Japan, South Korea, Canada, Australia, Israel.
@@ -798,6 +795,24 @@ buy?</p>
 <p>Measured that way, GDP is not the conclusion of this investigation.</p>
 <p>It is where the investigation begins.</p>
 
+<h2 id="postscript">Postscript on excluded measures</h2>
+<p><em>BTW: eight measures we deliberately left out</em></p>
+<p>There is one more thing worth knowing.</p>
+<p>Eight measures would have made this comparison broader &mdash; and in several cases probably
+harsher on the United States. We did not rank them.</p>
+<p>Not because they were inconvenient. Quite the opposite.</p>
+<p>We left them out because the instruments did not measure the same thing.</p>
+<p>Median household income is net and equivalised internationally, but gross at US state level.
+Poverty is relative on one side and absolute on the other. Maternal mortality is missing for
+eleven states. Life satisfaction changes more between survey instruments than between
+neighbouring states. Comparable median wages do not exist for the full set. Wage dispersion
+changes materially with the method itself.</p>
+<p>The rule was simple:</p>
+<p>If the instruments did not match, the comparison did not enter the ranking.</p>
+<p>That discipline cost the argument evidence. It did not protect it from inconvenient
+evidence.</p>
+<p>The full list of eight excluded measures is documented here.</p>
+<ol class="excluded"><li><strong>Median household income</strong> &mdash; the international figures are net and adjusted for household size; the American state figures are gross.</li><li><strong>Poverty rate</strong> &mdash; international rates are relative to each country&rsquo;s own median; the American threshold is absolute.</li><li><strong>Human Development Index</strong> &mdash; there is no state-level counterpart.</li><li><strong>Maternal mortality</strong> &mdash; only thirty-nine states publish a rate; a first place against an incomplete field is not a first place.</li><li><strong>Statutory paid vacation</strong> &mdash; zero in all fifty states; a ranking in which every state scores zero carries no information.</li><li><strong>Life satisfaction</strong> &mdash; the gap between two survey instruments (0.18 points) is larger than the gap between any two neighbouring states.</li><li><strong>Median wage</strong> &mdash; no source publishes comparable median wage levels for every country.</li><li><strong>Wage dispersion</strong> &mdash; the method alone moves the US figure by 16%, and a state is not a nation: for a measure of spread, the size of the unit is the measurement.</li></ol>
 <h2 id="sources">Sources and method</h2>
 <p>Every metric was taken from one source covering every country in that row, and from one source
 covering every state, with the two chosen to measure the same thing. Where that was impossible the
@@ -948,7 +963,7 @@ row.</div></a>
 <a href="fifty-states.pdf"><div class="k">Article (PDF)</div><div class="d">This page, including the
 charts and the source apparatus.</div></a>
 </div>
-<h3 id="changes">Changes</h3><p><time datetime="2026-09-23">23 September 2026</time> &mdash; Subtitle reworded; a summary, a conclusion, a table of contents, the author&rsquo;s name and a citation note added; body typeface changed. No existing figure was changed.</p><h3 id="cite">How to cite</h3><p class="cite">Michael H. Zachrau, &ldquo;Fifty States, Thirty-Five Countries&rdquo;, <em>mapgap.eu</em>, 18 September 2026, updated 23 September 2026. https://mapgap.eu/</p>
+<h3 id="changes">Changes</h3><p><time datetime="2026-09-23">23 September 2026</time> &mdash; Subtitle reworded; a summary, a conclusion, a postscript on the eight excluded measures, a table of contents, the author&rsquo;s name and a citation note added; body typeface changed. No existing figure was changed.</p><h3 id="cite">How to cite</h3><p class="cite">Michael H. Zachrau, &ldquo;Fifty States, Thirty-Five Countries&rdquo;, <em>mapgap.eu</em>, 18 September 2026, updated 23 September 2026. https://mapgap.eu/</p>
 </div>
 
 <div class="wrap"><h2 id="cards">All 35 countries</h2>
