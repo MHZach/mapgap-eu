@@ -10,29 +10,118 @@ thirteen metrics, with the comparisons that cannot be made and why.">
 <meta property="og:description" content="Thirty-five countries ranked against the fifty American
 states on thirteen metrics.">
 <meta property="og:type" content="article">
-<link rel="stylesheet" href="fonts.css">
+<meta property="og:url" content="https://mapgap.eu/">
+<meta property="og:site_name" content="mapgap.eu">
+<meta property="og:image" content="https://mapgap.eu/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Split image: Berlin on the left, an American city with the Capitol dome on the right">
+<meta name="author" content="Michael H. Zachrau">
+<meta property="article:author" content="Michael H. Zachrau">
+<meta property="article:published_time" content="2026-09-18">
+<meta property="article:modified_time" content="2026-09-23">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fifty States, Thirty-Five Countries">
+<meta name="twitter:description" content="Thirty-five countries ranked against the fifty American
+states on thirteen metrics.">
+<meta name="twitter:image" content="https://mapgap.eu/og.jpg">
+<link rel="canonical" href="https://mapgap.eu/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<meta name="theme-color" content="#FBFAF7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15171C" media="(prefers-color-scheme: dark)">
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Fifty States, Thirty-Five Countries",
+ "description": "Thirty-five countries ranked against the fifty American states on thirteen metrics, with the comparisons that cannot be made and why.",
+ "url": "https://mapgap.eu/",
+ "mainEntityOfPage": "https://mapgap.eu/",
+ "image": "https://mapgap.eu/og.jpg",
+ "inLanguage": "en",
+ "datePublished": "2026-09-18",
+ "dateModified": "2026-09-23",
+ "author": {
+  "@type": "Person",
+  "name": "Michael H. Zachrau"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "mapgap.eu",
+  "url": "https://mapgap.eu/"
+ },
+ "isAccessibleForFree": true
+}</script>
+<link rel="stylesheet" href="fonts.css?v=20260923">
 <style>
 :root{--bg:#FBFAF7;--fg:#14151A;--mut:#585E6A;--dim:#646A74;--acc:#14151A;--gut:#2C5F5A;--mittel:#7E7A70;--schlecht:#9C5A34;
 --line:#E4E2DB;--panel:#F3F1EB;--rule:#C9C6BD;--band:rgba(20,21,26,.055);
 --nmw:112px;--vlw:62px;--gap:8px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
+/* EB Garamond statt Source Serif 4 (Mike, 23.09.): feinere Strichstaerke.
+   Zwei Anpassungen sind dabei noetig, sonst wirkt der Satz kleiner und enger:
+   die x-Hoehe ist geringer, daher 21px statt 19,5px; und ohne antialiased
+   rendert macOS die Schrift mit Subpixel-Glaettung deutlich kraeftiger. */
 body{margin:0;background:var(--bg);color:var(--fg);
- font-family:'Source Serif 4',Georgia,serif;
- font-size:19.5px;line-height:1.66;-webkit-text-size-adjust:100%;
- font-feature-settings:"onum" 1;text-rendering:optimizeLegibility}
+ font-family:'EB Garamond',Georgia,serif;
+ font-size:21px;line-height:1.62;-webkit-text-size-adjust:100%;
+ font-feature-settings:"onum" 1;text-rendering:optimizeLegibility;
+ -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .sans,.eyebrow,.byline,figcaption,.chart,.card,table,footer,h3,.dl,.how,.chead,
 .crow,.row,.fisc,.no{font-family:'IBM Plex Sans',system-ui,sans-serif;
  font-feature-settings:normal}
 .wrap{max-width:760px;margin:0 auto;padding:0 20px}
-header.top{border-bottom:1px solid var(--rule);padding:64px 0 34px;margin-bottom:0}
-header.top .wrap{position:relative}
+/* Der Titel steht OBEN im offenen Himmel, nicht unten auf der Architektur.
+   Gemessen am Bild: obere 33 Prozent 170-203 Helligkeit (Mitte am hellsten),
+   ab 45 Prozent faellt es auf 61-102 ab - dort stehen Gebaeude und Strasse.
+   Deshalb dunkle Schrift oben und ein heller Verlauf, der nur den Himmel
+   aufhellt und die Silhouetten frei laesst. */
+header.top{position:relative;border-bottom:1px solid var(--rule);padding:0;margin-bottom:0;
+ display:flex;align-items:flex-start;min-height:clamp(560px,43vw,700px);
+ background:#C4CBD3 url('hero.webp') center top/cover no-repeat}
+/* Kein Schleier ueber die ganze obere Haelfte (wirkte wie Nebel, Mike 23.09.).
+   Der Himmel ist in der Mitte ohnehin hell genug fuer dunkle Schrift; es bleibt
+   nur ein schwacher, begrenzter Lichthof direkt hinter dem Textblock. Unten ein
+   dunkler Verlauf nur ueber dem Board, damit die weisse Byline sicher traegt. */
+header.top::after{content:'';position:absolute;inset:0;pointer-events:none;
+ background:
+  linear-gradient(to top,rgba(10,11,14,.55) 0%,rgba(10,11,14,.22) 11%,rgba(10,11,14,0) 22%),
+  radial-gradient(ellipse 42% 30% at 50% 16%,rgba(251,250,247,.30) 0%,
+   rgba(251,250,247,.12) 60%,rgba(251,250,247,0) 100%)}
+header.top h1,header.top .stand{text-shadow:0 0 18px rgba(251,250,247,.55)}
+/* Die Unterzeile reicht bei vielen Breiten bis an die Hochhausspitzen. Statt einer
+   aufgehellten Flaeche (wirkt als Nebelfleck) ein enger Schein, der den
+   Buchstabenformen folgt, und ein etwas kraeftigerer Schnitt. */
+header.top .stand{font-weight:500;
+ text-shadow:0 0 2px rgba(251,250,247,.95),0 0 7px rgba(251,250,247,.85),
+  0 0 16px rgba(251,250,247,.6)}
+@media(max-width:640px){
+ header.top .stand{font-size:17px;line-height:1.38}}
+header.top>.eyebrow{text-shadow:0 0 10px rgba(251,250,247,.7)}
+header.top .wrap{position:relative;z-index:1;width:100%;text-align:center;
+ padding-top:26px;padding-bottom:0}
+/* Titel und Unterzeile zwei Stufen kleiner als im Fliesstext-Massstab, damit der
+   Block ganz in den offenen Himmel passt. */
+header.top h1{font-size:clamp(34px,6.4vw,60px);margin:0 0 14px}
+header.top .stand{font-size:19px;margin:0 auto;max-width:31em}
+/* Kennung links oben in der Ecke, nicht ueber dem Titel. */
+header.top>.eyebrow{position:absolute;top:20px;left:26px;z-index:2}
+/* Die Datenzeile steht unten auf dem dunklen Board im Vordergrund - dort traegt
+   Weiss (gemessene Helligkeit der unteren 30 Prozent: 61-90 von 255). */
+header.top>.byline{position:absolute;left:0;right:0;bottom:16px;z-index:2;
+ margin:0;padding:0 20px;text-align:center;color:#fff;line-height:1.5;
+ text-shadow:0 1px 10px rgba(0,0,0,.6)}
+header.top>.byline .au{font-weight:600}
+header.top>.byline .nw{white-space:nowrap}
+@media(max-width:640px){header.top>.byline{font-size:12.5px;bottom:12px}
+ header.top .wrap{padding-top:50px}}
 .rule{height:1px;background:var(--rule);margin:0 0 40px}
 .eyebrow{font-size:13px;letter-spacing:2.4px;text-transform:uppercase;color:var(--mut);font-weight:500}
 h1{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(44px,9vw,82px);
  line-height:.97;font-weight:400;letter-spacing:-1px;margin:18px 0 20px}
 .stand{font-size:23px;color:var(--fg);line-height:1.42;margin:0 0 22px;
- font-family:'Source Serif 4',Georgia,serif}
+ font-family:'EB Garamond',Georgia,serif}
 .byline{font-size:14px;color:var(--dim)}
 h2{font-family:'Instrument Serif',Georgia,serif;font-size:40px;font-weight:400;
  line-height:1.1;margin:62px 0 20px;letter-spacing:-.4px}
@@ -144,13 +233,73 @@ footer{border-top:1px solid var(--rule);margin-top:64px;padding:40px 0 60px;
  font-size:13.5px;color:var(--dim);line-height:1.6}
 footer a{color:var(--mut)}
 
+/* Sprungmarke fuer Tastatur und Screenreader: unsichtbar, bis sie den Fokus hat. */
+.skip{position:absolute;left:12px;top:-60px;z-index:10;background:var(--fg);color:var(--bg);
+ font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:14px;padding:10px 14px;
+ border-radius:3px;text-decoration:none}
+.skip:focus{top:12px}
+/* Inhaltsverzeichnis: 12.900 Woerter brauchen Orientierung und verlinkbare Abschnitte. */
+.toc{font-family:'IBM Plex Sans',system-ui,sans-serif;margin:46px 0 8px;padding:18px 0 16px;
+ border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.toc .k{font-size:12px;letter-spacing:1.8px;text-transform:uppercase;color:var(--mut);
+ font-weight:600;margin-bottom:10px}
+.toc ol{margin:0;padding:0 0 0 22px;font-size:14.5px;line-height:1.55;color:var(--mut)}
+.toc li{break-inside:avoid;padding:1px 0}
+.toc a{color:var(--fg);text-decoration:none}
+.toc a:hover{text-decoration:underline}
+@media(min-width:640px){.toc ol{columns:2;column-gap:36px}}
+h2[id],h3[id],#summary{scroll-margin-top:18px}
+/* Kurzfassung am Artikelanfang. */
+.tldr{margin:48px 0 10px;padding:20px 24px 8px;background:var(--panel);
+ border-left:2px solid var(--fg)}
+.tldr .k{font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:12px;letter-spacing:1.8px;
+ text-transform:uppercase;color:var(--mut);font-weight:600;margin-bottom:10px}
+.tldr ul{margin:0;padding:0 0 0 20px;font-size:19px;line-height:1.5}
+.tldr li{margin:0 0 12px}
+.tldr .nach{font-size:16.5px;line-height:1.5;color:var(--mut);margin:4px 0 12px;
+ padding-top:10px;border-top:1px solid var(--line)}
+.cite{font-size:17px;line-height:1.5;padding:12px 16px;background:var(--panel);
+ border:1px solid var(--line);border-radius:3px;overflow-wrap:anywhere}
+header.top>.byline a{color:inherit;text-decoration:underline;
+ text-decoration-color:rgba(255,255,255,.45);text-underline-offset:2px}
+
+/* Dunkelmodus nur am Bildschirm; Druck und PDF bleiben hell. */
+@media screen and (prefers-color-scheme:dark){
+ :root{--bg:#15171C;--fg:#E7E5DF;--mut:#A7ACB5;--dim:#9DA2AC;--acc:#E7E5DF;
+  --gut:#62A89F;--mittel:#9E998D;--schlecht:#D38C60;
+  --line:#2A2D34;--panel:#1C1F25;--rule:#3B3F47;--band:rgba(231,229,223,.075)}
+ /* Der Hero bleibt hell: dunkle Schrift auf aufgehelltem Himmel. Ohne diesen
+    Block wuerde der Titel die helle Textfarbe erben und verschwinden. */
+ header.top{--fg:#14151A;--mut:#585E6A;--dim:#646A74;color:var(--fg)}
+ a{color:#CDD1D8;text-decoration-color:#5C616A}
+ a:hover{color:#fff;text-decoration-color:#fff}
+ strong{color:#fff}
+ .pq,.lead{border-left-color:var(--fg)}
+ .row .nm,.crow .l,.how b{color:var(--fg)}
+ .row.us .bar,.row.us .dot{background:var(--fg)}
+ .bandbox{border-left-color:rgba(231,229,223,.24);border-right-color:rgba(231,229,223,.24)}
+ .flags img{box-shadow:0 0 0 1px rgba(231,229,223,.22)}
+ .dl a:hover{border-color:var(--fg)}
+ .gap{background:#2B1F24}
+}
+
 @media print{
  @page{size:A4;margin:18mm 16mm}
+ .skip,.toc{display:none}
  :root{--bg:#fff;--fg:#14151A;--mut:#4A505C;--dim:#5A6069;--acc:#14151A;--gut:#2C5F5A;--mittel:#7E7A70;--schlecht:#9C5A34;
   --line:#DDDCD6;--panel:#F6F5F1;--rule:#BFBDB4;--band:rgba(20,21,26,.06)}
  body{font-size:10.5pt;line-height:1.5}
  .wrap{max-width:none;padding:0}
- header.top{padding:0 0 18pt;margin-bottom:22pt;break-after:avoid}
+ header.top{padding:0 0 18pt;margin-bottom:22pt;break-after:avoid;
+  display:block;min-height:0;background:none}
+ header.top::after{display:none}
+ header.top .wrap{padding-top:0;padding-bottom:0;text-align:left}
+ header.top h1{font-size:34pt;margin:8pt 0 10pt}
+ header.top .stand{max-width:none;font-size:13pt;background:none;padding:0;text-shadow:none}
+ header.top h1,header.top>.eyebrow{text-shadow:none}
+ header.top>.eyebrow{position:static}
+ header.top>.byline{position:static;padding:0;text-align:left;color:var(--dim);
+  text-shadow:none;margin-top:8pt}
  h1{font-size:34pt;margin:8pt 0 10pt}
  .stand{font-size:13pt}
  h2{font-size:17pt;margin:22pt 0 8pt;break-after:avoid}
@@ -217,16 +366,22 @@ footer a{color:var(--mut)}
 </style>
 </head>
 <body>
-<header class="top"><div class="wrap">
+<a class="skip" href="#summary">Skip to article</a>
+<header class="top">
 <div class="eyebrow">mapgap.eu</div>
+<div class="wrap">
 <h1>Fifty States,<br>Thirty-Five Countries</h1>
-<p class="stand">A measurement exercise: what happens when the comparison people make rhetorically
-is made literally, and which halves of it survive.</p>
-<p class="byline">18 September 2026 &middot; 35 countries &middot; 13 metrics &middot; all
-sources listed</p>
-</div></header>
+<p class="stand">A measurement exercise: what happens when a rhetorical comparison is tested
+against the data &mdash; and which parts survive</p>
+</div>
+<p class="byline"><span class="au nw">Michael H. Zachrau</span> &middot;
+<span class="nw"><time datetime="2026-09-18">18 September 2026</time>,</span>
+<a class="nw" href="#changes">updated <time datetime="2026-09-23">23 September 2026</time></a><br>35 countries &middot;
+13 metrics &middot; all sources listed</p>
+</header>
 
 <div class="wrap">
+<section class="tldr" id="summary" aria-label="Summary"><div class="k">TL;DR</div><ul><li>On things governments can directly change &mdash; guns, prisons, paid leave, road safety &mdash; the countries in this study beat the American states almost without exception, often by enormous margins.</li><li>On GDP per head, the ranking flips. Even the poorest US state produces more than almost every country in the sample.</li><li>But output is not income, distribution or welfare. The American advantage shrinks sharply at the median &mdash; and against Germany, it reverses.</li><li>That leaves the more interesting question: how can a country produce so much, yet convert so little of that advantage into broadly shared outcomes?</li></ul><p class="nach">Eight apparently useful comparisons were discarded because the underlying measurements did not match. That is part of the result too.</p></section>
 <h2 id="premise">The device, taken literally</h2>
 <p>A chart circulated widely this year. It set Germany's social statistics against the fifty
 American states and gave each one a rank: life expectancy, first; homicide, first; gun deaths,
@@ -243,6 +398,7 @@ that measure the same thing on both sides of the comparison. Rank one means bett
 states. Rank fifty-one means worse than every one of them. The District of Columbia is reported
 where it is informative and never counted among the fifty: it is a city, and a city of a particular
 kind.</p>
+<nav class="toc" aria-label="Contents"><div class="k">Contents</div><ol><li><a href="#premise">The device, taken literally</a></li><li><a href="#notclose">Where the answer is not close</a></li><li><a href="#reverses">Where it reverses</a></li><li><a href="#pandemic">The metric that fits neither family</a></li><li><a href="#income">The income question</a></li><li><a href="#traps">What the traps cost</a></li><li><a href="#cannot">What cannot be compared</a></li><li><a href="#notreporting">Four ways of not reporting</a></li><li><a href="#conclusion">What the exercise measures</a></li><li><a href="#closing">Conclusion</a></li><li><a href="#sources">Sources and method</a></li><li><a href="#downloads">Take the data</a></li><li><a href="#cards">All 35 countries</a></li><li><a href="#legal">Legal notice</a></li></ol></nav>
 <p>The thirty-five are a selection, not a population, and it is worth saying so rather than
 inventing a rule they satisfy. They comprise the larger European economies, the Nordic and Baltic
 states, and the non-European rich democracies &mdash; Japan, South Korea, Canada, Australia, Israel.
@@ -607,6 +763,41 @@ should not be asked to carry distributions, and it should never be asked to carr
 statistical system does not fill in the category being measured. Most of the work in this exercise
 went into finding out which was which.</p>
 
+<h2 id="closing">Conclusion</h2>
+<p>The most striking American number may not be GDP.</p>
+<p>It may be the weak conversion of extraordinary aggregate wealth into outcomes shared by the
+people who produce it.</p>
+<p>The United States generates more output per head than almost any comparable society. Yet that
+advantage is far less visible in median earnings, life expectancy, safety, imprisonment, paid
+leave or several of the other measures examined here. The study does not show that prosperity
+causes those outcomes, nor that redistribution alone would solve them. It shows something
+narrower and harder to dismiss: production, distribution and welfare are different
+quantities.</p>
+<p>That result arrives independently at a place familiar from
+<a href="https://doi.org/10.1093/qje/qjab036">Thomas Piketty&rsquo;s work on inequality and political cleavage</a>.
+Rising concentration at the top does not merely change who owns what; it can also change whose
+interests are represented and how readily democratic systems respond to inequality.
+Piketty&rsquo;s research has linked rising inequality to a weakening of the traditional political
+coalitions that once supported redistribution.</p>
+<p><a href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2017/03/preventing-policy-capture_g1g78280/9789264065239-en.pdf">The OECD</a> describes the next step even more explicitly. When economic
+power translates into disproportionate political influence, policy can be drawn away from the
+general interest toward specific groups. The resulting benefits can then finance still more
+influence &mdash; a feedback loop the OECD calls policy capture and a &ldquo;vicious cycle of
+inequality.&rdquo; It can operate through corruption, but also through entirely legal mechanisms
+such as lobbying, political finance and privileged access.</p>
+<p><a href="https://wir2026.wid.world/insight/regional-wealth-inequality/">The World Inequality Report 2026</a> describes the same problem from the
+distributional side: in North America and Oceania the top 10% hold 65&ndash;70% of wealth, while
+the bottom half holds just 1%; <a href="https://wir2026.wid.world/insight/executive-summary/">its broader research warns</a> that concentrated
+financial power can amplify elite political voices and marginalise the working majority.</p>
+<p>So perhaps the familiar question &mdash; which system produces more? &mdash; has become the
+wrong one.</p>
+<p>America plainly produces an extraordinary amount.</p>
+<p>The harder question is:</p>
+<p>Who receives it, who decides what it is used for, and what does all that wealth ultimately
+buy?</p>
+<p>Measured that way, GDP is not the conclusion of this investigation.</p>
+<p>It is where the investigation begins.</p>
+
 <h2 id="sources">Sources and method</h2>
 <p>Every metric was taken from one source covering every country in that row, and from one source
 covering every state, with the two chosen to measure the same thing. Where that was impossible the
@@ -716,6 +907,34 @@ death among American children traces to <a
 href="https://www.nejm.org/doi/full/10.1056/NEJMc2201761">Goldstick, Cunningham and Carter, NEJM
 2022</a>, and was re-checked against the underlying data rather than cited from the paper.</p>
 
+<h3>Conclusion</h3>
+<p>The conclusion draws on three sources outside the dataset. Each was checked against the
+passage it is used for; page numbers are the printed ones.</p>
+<table>
+<tr><th>Used for</th><th>Source</th><th>Where</th></tr>
+<tr><td>Inequality and political cleavage; weakened coalitions for redistribution</td>
+<td>Thomas Piketty, <a href="http://piketty.pse.ens.fr/files/Piketty2018.pdf">&ldquo;Brahmin Left vs Merchant Right: Rising
+Inequality and the Changing Structure of Political Conflict&rdquo;</a>, WID.world Working Paper
+2018/7, March 2018. Extended in Amory Gethin, Clara Mart&iacute;nez-Toledano and Thomas Piketty,
+<a href="https://doi.org/10.1093/qje/qjab036">&ldquo;Brahmin Left Versus Merchant Right: Changing Political Cleavages in
+21 Western Democracies, 1948&ndash;2020&rdquo;</a>, <em>Quarterly Journal of Economics</em>
+137(1), 2022, 1&ndash;48, doi:10.1093/qje/qjab036</td>
+<td>Working paper p.&nbsp;4</td></tr>
+<tr><td>Policy capture; &ldquo;vicious cycle of inequality&rdquo;; legal channels such as lobbying
+and political finance</td>
+<td>OECD, <a href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2017/03/preventing-policy-capture_g1g78280/9789264065239-en.pdf"><em>Preventing Policy Capture: Integrity in Public Decision
+Making</em></a>, OECD Public Governance Reviews, OECD Publishing, Paris, 2017,
+doi:10.1787/9789264065239-en</td>
+<td>pp.&nbsp;9, 26&ndash;27</td></tr>
+<tr><td>Wealth shares of the top 10% and the bottom 50%</td>
+<td>Lucas Chancel, Ricardo G&oacute;mez-Carrera, Rowaida Moshrif, Thomas Piketty et al.,
+<a href="https://wir2026.wid.world/www-site/uploads/2026/09/World_Inequality_Report_2026.pdf"><em>World Inequality Report 2026</em></a>, World Inequality Lab</td>
+<td>ch.&nbsp;3, Figure&nbsp;3.8, p.&nbsp;81 (figures given for North America &amp; Oceania)</td></tr>
+<tr><td>Concentrated financial power, elite voices and the working majority</td>
+<td>Same report, Executive Summary</td>
+<td>p.&nbsp;18</td></tr>
+</table>
+
 
 <h2 id="downloads">Take the data</h2>
 <p>Everything here is reproducible. The figures below are the ones the charts and cards are drawn
@@ -729,6 +948,7 @@ row.</div></a>
 <a href="fifty-states.pdf"><div class="k">Article (PDF)</div><div class="d">This page, including the
 charts and the source apparatus.</div></a>
 </div>
+<h3 id="changes">Changes</h3><p><time datetime="2026-09-23">23 September 2026</time> &mdash; Subtitle reworded; a summary, a conclusion, a table of contents, the author&rsquo;s name and a citation note added; body typeface changed. No existing figure was changed.</p><h3 id="cite">How to cite</h3><p class="cite">Michael H. Zachrau, &ldquo;Fifty States, Thirty-Five Countries&rdquo;, <em>mapgap.eu</em>, 18 September 2026, updated 23 September 2026. https://mapgap.eu/</p>
 </div>
 
 <div class="wrap"><h2 id="cards">All 35 countries</h2>
@@ -789,7 +1009,8 @@ carry their own terms, which are linked in the dataset.</p>
 and in the notes shipped with the dataset. Country figures: OECD, WHO Mortality Database, IMF,
 World Prison Brief, ITF, UNDP, WSI, Eurostat, CSO Ireland, Our World in Data. State figures: CDC,
 CDC WONDER, NCHS, BEA, US Census Bureau, Bureau of Justice Statistics, Prison Policy Initiative,
-IIHS, US Department of Labor, BLS, A Better Balance.</p>
+IIHS, US Department of Labor, BLS, A Better Balance. Conclusion: Piketty (2018); Gethin,
+Mart&iacute;nez-Toledano and Piketty (2022); OECD (2017); World Inequality Report 2026.</p>
 <p>Latest comparable years, 2017&ndash;2026. Reference years differ between metrics and are stated
 per metric. No figure on this page is age-standardised unless the text says so.</p>
 </div></footer>
